@@ -96,107 +96,98 @@ export default function RecentCarDetails({ car, carIndex }) {
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/fuel.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Fuel</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">Petrol</p>
                       </div>
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/kmdrive.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">KM driven</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">40,780 km</p>
                       </div>
                     </div>
                   </div>
                     <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
                     <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/manual.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Transmission</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">Manual</p>
                       </div>
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/engine.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Engine capacity</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">1197cc</p>
                       </div>
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/membership.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Ownership</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">1st</p>
                       </div>
                     </div>
                   </div>
                     <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
                     <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/make-years.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
+                        <span className="text-white fSize-2 fw-medium m-0">Make year</span>
                         <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
                       </div>
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/key.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Spare key</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">No</p>
                       </div>
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/reg-number.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Reg number</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">DL3C**2432</p>
                       </div>
                     </div>
                   </div>
                     <div className="overviewcarplaneListCard d-flex align-items-center">
                     <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/insurance.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Insurance</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">Need renewal</p>
                       </div>
                     </div>
                       <div className="d-flex align-items-center gap-3">
                       <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
+                        <img src="/assets/img/plan-from.png" alt="" width={25} height={25}/>
                       </div>
                       <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
-                      </div>
-                    </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
+                        <span className="text-white fSize-2 fw-medium m-0">Insurance type</span>
+                        <p className="text-white fSize-4 fw-semibold m-0">Plans from ₹3,796/y</p>
                       </div>
                     </div>
                   </div>
