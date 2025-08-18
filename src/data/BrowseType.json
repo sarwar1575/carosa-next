@@ -1,0 +1,32 @@
+[
+    {
+        "image": "https://i.ibb.co/j9Xc9yjR/kia.png",
+        "available":3,
+        "types":"SUV"
+    },
+     {
+        "image": "https://i.ibb.co/j9Xc9yjR/kia.png",
+        "available":7,
+        "types":"Sedan"
+    },
+     {
+        "image": "https://i.ibb.co/j9Xc9yjR/kia.png",
+        "available":16,
+        "types":"Hatchback"
+    },
+     {
+        "image": "https://i.ibb.co/j9Xc9yjR/kia.png",
+        "available":0,
+        "types":"Hybrid"
+    },
+     {
+        "image": "https://i.ibb.co/j9Xc9yjR/kia.png",
+        "available":3,
+        "types":"Convertible"
+    },
+     {
+        "image": "https://i.ibb.co/j9Xc9yjR/kia.png",
+        "available":3,
+        "types":"Convertible"
+    }
+]

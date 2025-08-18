@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/KxqYYKnZ/listing.png",
+    "title": "Listing",
+    "description": "List your car quickly and easily on Carosa."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/qPKgM7J/inspections.png",
+    "title": "Inspection",
+    "description": "Get a free, professional vehicle inspection to boost buyer trust."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/HDh3V3vK/offer.png",
+    "title": "Best Offer",
+    "description": "Get the highest market price from trusted buyers."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/3YMJnNkd/sellPaid.png",
+    "title": "Sell & Get Paid + Support",
+    "description": "Deliver your car to our centre or at home after paperwork; enjoy lifetime free assistance."
+  }
+]

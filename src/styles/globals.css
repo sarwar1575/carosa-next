@@ -1,0 +1,902 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  font-family: "Poppins", sans-serif !important;
+  background-color: var(--body-bg-color) !important;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+ul li {
+  list-style: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.fSize-1 {
+  font-size: 0.625rem !important;
+}
+
+.fSize-2 {
+  font-size: 0.75rem !important;
+}
+
+.fSize-3 {
+  font-size: 0.875rem !important;
+}
+
+.fSize-4 {
+  font-size: 1rem !important;
+}
+
+.fSize-5 {
+  font-size: 1.125rem !important;
+}
+
+.fSize-6 {
+  font-size: 1.25rem !important;
+}
+
+.fSize-7 {
+  font-size: 1.375rem !important;
+}
+
+.fsSize-7-5 {
+  font-size: 1.5rem !important;
+}
+
+.fSize-8 {
+  font-size: 1.563rem !important;
+}
+
+.fSize-8-5 {
+  font-size: 1.5rem;
+}
+
+.fSize-9 {
+  font-size: 1.875rem !important;
+}
+
+.fSize-10 {
+  font-size: 2.188rem !important;
+}
+
+.fSize-11 {
+  font-size: 2.5rem !important;
+}
+
+.fSize-12 {
+  font-size: 2.75rem !important;
+}
+
+.fSize-over {
+  font-size: 5.125rem;
+}
+
+.fst-italic {
+  font-style: italic !important;
+}
+
+.fst-normal {
+  font-style: normal !important;
+}
+
+.fw-thin {
+  font-weight: 100 !important;
+}
+
+.fw-lighter {
+  font-weight: 200 !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-medium {
+  font-weight: 500 !important;
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-bolder {
+  font-weight: 800 !important;
+}
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+.padding-Y-X {
+
+  padding: 30px 80px !important;
+}
+
+.X-Y-SETTER {
+  padding: 0px 80px !important;
+}
+
+:root {
+  --main-bg-color: #2E054E;
+  --content-text-color: #0F0F10;
+  --common-text-color: #FFFFFF;
+  --card-unique-color: #050B20;
+  --advance-text-color: #050B20;
+  --suport-color: #D8D8D8;
+  --litter-green: #8EC73E;
+  --country-bg-color: #FAFAFA;
+  --input-color: #6C757D;
+  --call-bg-color: #2A3A92;
+  --body-bg-color: #F4F7FF;
+  --rateing-bg-color: #00B67A;
+  --social-text-color: #717272;
+}
+
+/* Navbar css on  */
+.navbar {
+  position: fixed !important;
+  top: 22px;
+  left: 80px;
+  right: 80px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 50px;
+  /* optional for your style */
+}
+
+.navLinkLists .nav-list .nav-items .nav-links {
+  color: #0F0F10;
+}
+
+.navLinkLists .nav-list .nav-items .nav-links::after {
+  content: "";
+  background-color: var(--litter-green);
+  width: 0;
+  height: 5px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.navLinkLists .nav-list .nav-items .nav-links:hover:after {
+
+  width: 100%;
+}
+
+.mega-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0px;
+  display: none;
+  opacity: 0;
+  transition: all .1s ease-in-out 0s;
+  z-index: 99;
+  border: 1px solid #dde5eb;
+  box-shadow: 0 24px 48px hsla(221, 9%, 54%, .08);
+}
+
+.nav-items:hover .mega-menu {
+  display: block;
+  opacity: 1;
+}
+
+.navLinkLists .nav-list .nav-items {
+
+  padding: 25px 0px;
+}
+
+.dropdown-btn {
+  padding: 8px 20px;
+  cursor: pointer;
+  color: var(--main-bg-color) !important;
+  background-color: var(--country-bg-color) !important;
+}
+
+.dropdown-btn::after {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--suport-color);
+}
+
+.dropdownCountry .dropdown-menu {
+  display: block !important;
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 160px !important;
+  border: 0px !important;
+  z-index: 99 !important;
+}
+
+.searhInputNav {
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+  padding: 12px 35px 12px 50px !important;
+  border-radius: 12px !important;
+  border: 0px !important;
+}
+
+.searhInputNav::placeholder {
+
+  color: var(--input-color);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.callBtn {
+
+  background-color: var(--call-bg-color) !important;
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+.userNameHere .userProfile {
+
+  width: 30px;
+  height: 30px;
+  background-color: var(--litter-green);
+}
+
+.userName p {
+  color: var(--content-text-color);
+}
+
+.dropUserIcon {
+  color: var(--litter-green);
+  font-size: 10px;
+}
+
+/* Navbar css off  */
+
+/* Banner css on  */
+.linearBox {
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 85%, rgba(237, 221, 83, 1) 100%);
+}
+
+.bookBtn .buyBtn {
+
+  padding: 15px 15px;
+  background-color: var(--common-text-color);
+  border-radius: 12px;
+  color: var(--call-bg-color);
+}
+
+.modalsBtns .carTabs {
+  padding: 7px 20px;
+  border: 1px solid #E9E9E9;
+  border-radius: 44px;
+}
+
+/* Banner css off  */
+
+/* Look car section css on  */
+.carBody {
+
+  height: 392px;
+}
+
+.carBody::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+.titles {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Look car section css off  */
+
+/* Recent view car css on  */
+.webMainTitle h1 {
+
+  color: var(--content-text-color);
+}
+
+.viewAll .viewBtn {
+
+  color: var(--card-unique-color);
+}
+
+.cardMain .card .card-body {
+  background-color: var(--card-unique-color);
+}
+
+.cardMain .card img {
+
+  border-radius: 12px 12px 0px 0px;
+}
+
+.cardMain .card .card-body {
+
+  border-radius: 0px 0px 12px 12px;
+}
+
+.vehicleDetaile p {
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.filters-carousel {
+  width: 100% !important;
+}
+
+.addMore {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.addMore img {
+  width: 9px !important;
+  object-fit: cover;
+  border-radius: 0px !important;
+}
+
+.carosaBisk {
+  /* background-color: var(--card-unique-color); */
+  background-image: url(../../public/images/carCard.png);
+  width: 177px;
+  background-size: cover;
+  /* pura div cover karega */
+  background-position: center;
+  /* beech me set hoga */
+  background-repeat: no-repea;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Recent view car css off  */
+
+/* Explore Our Full Collection css on  */
+.cardMain.explorCollectionCard .card .card-body {
+  background-color: var(--call-bg-color);
+}
+
+.carosaBisk.exploreBisk {
+  /* background-color: var(--call-bg-color); */
+  background-image: url(../../public/images/secCarCard.png);
+  width: 177px;
+  background-size: cover;
+  /* pura div cover karega */
+  background-position: center;
+  /* beech me set hoga */
+  background-repeat: no-repea;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Explore Our Full Collection css off  */
+
+/* Browse by Type css on  */
+.sightingVideo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  /* Top ka kitna hissa cover karna hai */
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.5),
+      /* top dark */
+      rgba(0, 0, 0, 0)
+      /* bottom transparent */
+    );
+  border-top-left-radius: 1rem;
+  /* same as rounded-4 */
+  border-top-right-radius: 1rem;
+  pointer-events: none;
+}
+
+.availableCard {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+/* Browse by Type css off  */
+
+/* Latest from autoverse css on  */
+.playBtn {
+  width: 90px;
+  height: 90px;
+  background-color: var(--common-text-color);
+  border-radius: 50%;
+}
+
+.latestCard .card .card-body p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--card-unique-color);
+}
+
+.latestCard .card .card-body span {
+  color: var(--input-color);
+}
+
+/* Latest from autoverse css off  */
+
+/* Choose Your Favorite Brand css on  */
+.cardBrands {
+  border: 1px solid #E9E9E9;
+  padding: 50px;
+
+}
+
+.cardBrands img {
+
+  width: 100px;
+  height: 90px;
+  object-fit: cover;
+}
+
+/* Choose Your Favorite Brand css off  */
+
+/* Stories of Bharosa css on  */
+.storyUserProfile {
+
+  width: 30px;
+  height: 30px;
+}
+
+.titleStory p:nth-child(1) {
+  color: var(--call-bg-color);
+}
+
+.titleStory p:nth-child(2) {
+  color: var(--content-text-color);
+}
+
+.imagelyr::after {
+  content: "";
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.storyCardParent {
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 12px;
+}
+
+.storyCardParent .card img {
+
+  border-radius: 12px 12px 0px 0px;
+}
+
+.storyPlayBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--common-text-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: absolute;
+  right: 12px;
+  top: -23px;
+}
+
+.storyPlayBtn img {
+
+  width: 10px;
+  border-radius: 0px !important;
+}
+
+/* Stories of Bharosa css off  */
+
+/* The Heart of Our Mission css on  */
+.rattingBox {
+
+  width: 18px;
+  height: 19px;
+  background-color: var(--rateing-bg-color);
+}
+
+.startIcon,
+.verifyCheck {
+  font-size: 8px;
+  color: var(--common-text-color);
+}
+
+.verifyTik {
+  width: 17px;
+  height: 17px;
+  background-color: var(--input-color);
+  border-radius: 50%;
+}
+
+.verifyTitle span {
+
+  color: var(--input-color);
+}
+
+.ratersTitle h6,
+p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--advance-text-color);
+}
+
+/* The Heart of Our Mission css off  */
+
+/* Ask for Assistance css on  */
+.asksMainParent {
+  background-color: var(--common-text-color);
+  border-radius: 0px 24px 0px 24px;
+}
+
+.socialAsker img {
+  width: 60px;
+  object-fit: cover;
+}
+
+.socialText h6 {
+  color: var(--content-text-color);
+}
+
+.socialText p {
+
+  color: var(--social-text-color);
+}
+
+.car {
+
+  color: var(--call-bg-color);
+}
+
+.osa {
+  color: var(--litter-green);
+}
+
+.gupshupCardParent {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+}
+
+.gupshupCardParent .card img {
+
+  height: 290px;
+}
+
+.gupshupCardParent .card img {
+
+  border-radius: 12px 12px 0px 0px;
+}
+
+.dottetDropdown {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+}
+
+/* Ask for Assistance css off  */
+
+/* Sell car banner css on  */
+.currentLocation .manualLocation {
+  color: var(--call-bg-color);
+}
+
+.spaceLocation {
+  background-color: var(--suport-color);
+  padding: 1px 15px;
+}
+
+.createListingBtn {
+  background-color: var(--call-bg-color);
+}
+
+/* Sell car banner css off  */
+
+/* How CAROSA Work css on  */
+.work-panel {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.watchWorksBtn .watchBtn {
+  background-color: var(--call-bg-color);
+}
+
+/* How CAROSA Work off  */
+
+
+/* Why Choose CAROSA css on  */
+.carosaChose {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.choseCaptions p {
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+/* Why Choose CAROSA css off */
+
+/* CAROSA Ka Bharosa css on  */
+.cardMain {
+  border-radius: 0px 50px 0px 50px;
+}
+
+.cardMain p {
+
+  color: var(--litter-green);
+}
+
+/* CAROSA Ka Bharosa css off  */
+
+/* recent cars view details css on  */
+.crnrImg-sx-th {
+  position: absolute;
+  top: -24px;
+  right: 10px;
+  width: 71px;
+}
+
+.carDetailsMainParent {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tabBtn {
+  color: var(--main-bg-color);
+}
+
+.aboutCarTab {
+  /* background-color: var(--litter-green); */
+  color: var(--advance-text-color);
+  background-color: #8EC73E66;
+  border: 1px solid var(--litter-green);
+}
+
+.viewCarosaBisk span {
+  background-color: var(--card-unique-color);
+  border-radius: 12px;
+}
+
+.detailsBannerImg .setPositioning {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.HomeTest,
+.deliveryCenter p,
+h6 {
+
+  color: var(--content-text-color);
+}
+
+.validParagrapg {
+  color: var(--call-bg-color);
+}
+
+.outerPart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FFDE33;
+  padding: 2px;
+
+}
+
+.phoneIcon {
+  border-radius: 50%;
+  background-color: var(--litter-green);
+  width: 100%;
+  height: 100%;
+}
+
+.getCallBack p {
+  color: var(--content-text-color) !important;
+}
+
+.bookBtn .bookHere {
+  background-color: var(--call-bg-color);
+  border: 0px;
+  outline: none;
+}
+
+.bestOffers .offerHere {
+  border: 0px;
+  outline: none;
+  background-color: var(--litter-green);
+}
+
+.shareFriend {
+  background-color: var(--country-bg-color);
+}
+
+.shareFriend span {
+  color: var(--content-text-color);
+}
+
+/* recent cars view details css on  */
+
+/* overview detaile css on  */
+.carOverView {
+
+  background: linear-gradient(90deg, rgba(5, 50, 78, 1) 6%, rgba(42, 58, 146, 1) 100%);
+}
+.overviewcarplaneListCard{
+
+      gap: 90px !important;
+}
+/* overview detaile css off  */
+
+/* Footer css on  */
+.footerMain {
+
+  /* background-color: var(--main-bg-color); */
+  background: linear-gradient(0deg, rgba(142, 199, 62, 0.71) 0%, rgba(42, 58, 146, 0.9) 69%);
+}
+
+.footerLog h3::before {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--common-text-color);
+}
+
+.footerLinksParents .list-items .link-item {
+  color: var(--suport-color);
+}
+
+.socialMediaPlatformList .social-item .social-link {
+
+  width: 40px;
+  height: 40px;
+  background-color: var(--content-text-color);
+}
+
+/* Footer css off  */
+
+
+
+/* desktop mega menu */
+
+@media (min-width: 1400px) {
+
+  .nav-items.has-mega:hover .mega-menu,
+  .nav-items.has-mega:focus-within .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.mega-heading {
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.mega-menu a {
+  color: #334155;
+  text-decoration: none;
+}
+
+.mega-menu a:hover {
+  color: #0f766e;
+}
+
+/* search icon inside input */
+.searchIconWrap {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.searhInputNav {
+  height: 40px;
+  border-radius: 10px !important;
+}
+
+/* country dropdown (desktop) */
+.dropdownCountry .dropdown-menu {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #eef0f4;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  padding: 6px;
+}
+
+.countryLists .dropdown-item {
+  border-radius: 8px;
+}
+
+/* mobile drawer polish */
+.mobile-drawer .offcanvas-body {
+  padding-top: .5rem;
+}
+
+/* spacing tweaks small screens */
+@media (max-width: 1399.98px) {
+  .navSearchInput {
+    width: 100%;
+  }
+
+  .rightWave {
+    gap: .75rem !important;
+  }
+
+  .navbar {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    left: 20px !important;
+    right: 20px !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .padding-Y-X {
+    padding: 20px 16px !important;
+  }
+
+}
