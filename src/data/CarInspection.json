@@ -1,0 +1,27 @@
+[
+    {
+        "vehicleHealth": "Overall vehicle health",
+        "points": 200,
+        "accidentVehicle": "No",
+        "adometer": "No",
+        "damages": "No",
+        "quality": 140
+    },
+     {
+        "vehicleHealth": "Overall vehicle health",
+        "points": 200,
+        "accidentVehicle": "No",
+        "adometer": "No",
+        "damages": "No",
+        "quality": 140
+    },
+     {
+        "vehicleHealth": "Overall vehicle health",
+        "points": 200,
+        "accidentVehicle": "No",
+        "adometer": "No",
+        "damages": "No",
+        "quality": 140
+    }
+    
+]

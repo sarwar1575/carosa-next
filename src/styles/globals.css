@@ -148,6 +148,8 @@ a {
   --body-bg-color: #F4F7FF;
   --rateing-bg-color: #00B67A;
   --social-text-color: #717272;
+  --inspection-bg-color: #E3E3E3;
+  --inspactions-text-color: #555555CC;
 }
 
 /* Navbar css on  */
@@ -774,6 +776,28 @@ h6 {
       gap: 90px !important;
 }
 /* overview detaile css off  */
+
+/* inspections car sections css on  */
+.inspectionSections{
+  background-color: var(--common-text-color);
+}
+.inspectionCardBox{
+  background-color: var(--inspection-bg-color);
+  border-radius: 0px 20px 0px 20px;
+}
+.hd-jjpst h6{
+  color: var(--call-bg-color);
+}
+.inico{
+  font-size: 6px;
+}
+.pointsInspection{
+  color: var(--inspactions-text-color);
+}
+.carsInspectionsReports p{
+  color: var(--call-bg-color);
+}
+/* inspections car sections css off  */
 
 /* Footer css on  */
 .footerMain {

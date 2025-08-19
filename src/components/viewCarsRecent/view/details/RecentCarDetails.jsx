@@ -3,7 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import inspectionData from "../../../../data/CarInspection.json";
 import {
+  faChevronRight,
   faIndianRupeeSign,
   faLocationDot,
   faPhone,
@@ -40,7 +42,10 @@ export default function RecentCarDetails({ car, carIndex }) {
         <Container fluid>
           <Row>
             <Col lg={2}>
-              <div className="tabBtnsList d-flex flex-column gap-2 position-sticky" style={{top: '190px'}}>
+              <div
+                className="tabBtnsList d-flex flex-column gap-2 position-sticky"
+                style={{ top: "190px" }}
+              >
                 <Link
                   href=""
                   className="tabBtn fSize-3 fw-medium py-3 bg-white w-100 d-inline-block text-center rounded-3 border"
@@ -83,118 +88,258 @@ export default function RecentCarDetails({ car, carIndex }) {
                 <div className="hdTile pb-2">
                   <h6 className="text-white fSize-6 fw-medium">Car Overview</h6>
                 </div>
-                <div>
-                  <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/years.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg. year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
-                      </div>
+                <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/years.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
                     </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/fuel.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Fuel</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Petrol</p>
-                      </div>
-                    </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/kmdrive.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">KM driven</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">40,780 km</p>
-                      </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Reg. year
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        Apr 2015
+                      </p>
                     </div>
                   </div>
-                    <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/manual.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Transmission</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Manual</p>
-                      </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/fuel.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
                     </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/engine.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Engine capacity</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">1197cc</p>
-                      </div>
-                    </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/membership.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Ownership</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">1st</p>
-                      </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Fuel
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        Petrol
+                      </p>
                     </div>
                   </div>
-                    <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/make-years.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Make year</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Apr 2015</p>
-                      </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/kmdrive.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
                     </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/key.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Spare key</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">No</p>
-                      </div>
-                    </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/reg-number.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Reg number</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">DL3C**2432</p>
-                      </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        KM driven
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        40,780 km
+                      </p>
                     </div>
                   </div>
-                    <div className="overviewcarplaneListCard d-flex align-items-center">
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/insurance.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Insurance</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Need renewal</p>
-                      </div>
+                </div>
+                <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/manual.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
                     </div>
-                      <div className="d-flex align-items-center gap-3">
-                      <div className="iconOverview">
-                        <img src="/assets/img/plan-from.png" alt="" width={25} height={25}/>
-                      </div>
-                      <div className="">
-                        <span className="text-white fSize-2 fw-medium m-0">Insurance type</span>
-                        <p className="text-white fSize-4 fw-semibold m-0">Plans from ₹3,796/y</p>
-                      </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Transmission
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        Manual
+                      </p>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/engine.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Engine capacity
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        1197cc
+                      </p>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/membership.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Ownership
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">1st</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/make-years.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Make year
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        Apr 2015
+                      </p>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/key.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Spare key
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">No</p>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/reg-number.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Reg number
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        DL3C**2432
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="overviewcarplaneListCard d-flex align-items-center">
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/insurance.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Insurance
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        Need renewal
+                      </p>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="iconOverview">
+                      <img
+                        src="/assets/img/plan-from.png"
+                        alt=""
+                        width={25}
+                        height={25}
+                      />
+                    </div>
+                    <div className="">
+                      <span className="text-white fSize-2 fw-medium m-0">
+                        Insurance type
+                      </span>
+                      <p className="text-white fSize-4 fw-semibold m-0">
+                        Plans from ₹3,796/y
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* Car overview section  */}
+
+              {/* inspections car sections  */}
+              <div className="inspectionSections mt-4 p-3">
+                <div className="hdTile pb-2">
+                  <h6 className="text-dark fSize-6 fw-medium">
+                    Car inspection report
+                  </h6>
+                </div>
+                <Row>
+                  {inspectionData.map((items, index) => (
+                    <Col xl={4} md={6} xs={12} key={index}>
+                      <div className="inspectionCardBox p-2">
+                        <div className="hd-jjpst d-flex gap-2 align-items-center">
+                          <img
+                            src="/assets/img/breakHart.png"
+                            alt=""
+                            className=""
+                            width={15}
+                          />
+                          <Link href="" className="d-flex align-items-center gap-2"><h6 className="fSize-2 fw-medium m-0">{items.vehicleHealth}</h6> <FontAwesomeIcon icon={faChevronRight} className="inico"/> </Link> 
+                        </div>
+                        <span className="pointsInspection fSize-2 fw-semibold">{items.points} points inspected.</span>
+                        <div className="pt-2">
+                        <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
+                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
+                        </div>
+                           <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
+                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
+                        </div>
+                           <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
+                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
+                        </div>
+                           <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
+                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
+                        </div>
+                        </div>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+              {/* inspections car sections  */}
             </Col>
-            <Col lg={4} className="position-sticky" style={{top: '190px'}}>
+            <Col lg={4} className="position-sticky" style={{ top: "190px" }}>
               <div className="carDetailsMainParent p-3 rounded-3 bg-white position-relative">
                 <h2 className=" fw-bold mb-1">{brand}</h2>
                 <p className="fSize-3 fw-normal mb-3">{model}</p>
@@ -321,13 +466,27 @@ export default function RecentCarDetails({ car, carIndex }) {
                           </Link>
                         </div>
                       </div>
-                      <p className="m-0 fSize-2 fw-semibold"><Link href="" className="text-dark">Get call back</Link></p>
+                      <p className="m-0 fSize-2 fw-semibold">
+                        <Link href="" className="text-dark">
+                          Get call back
+                        </Link>
+                      </p>
                     </div>
                     <div className="bookBtn">
-                      <button type="btn" className="bookHere text-white fSize-2 fw-semibold py-2 px-4 ">Book Know</button>
+                      <button
+                        type="btn"
+                        className="bookHere text-white fSize-2 fw-semibold py-2 px-4 "
+                      >
+                        Book Know
+                      </button>
                     </div>
-                     <div className="bestOffers">
-                      <button type="btn" className="offerHere text-white fSize-2 fw-semibold py-2 px-4 ">Make Best Offer</button>
+                    <div className="bestOffers">
+                      <button
+                        type="btn"
+                        className="offerHere text-white fSize-2 fw-semibold py-2 px-4 "
+                      >
+                        Make Best Offer
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -345,16 +504,33 @@ export default function RecentCarDetails({ car, carIndex }) {
                     Add to Wishlist
                   </button>
                 </div> */}
-                <img src="/images/shihiting.png" alt="" className="crnrImg-sx-th"/>
+                <img
+                  src="/images/shihiting.png"
+                  alt=""
+                  className="crnrImg-sx-th"
+                />
               </div>
               <div className="shareFriend mt-4 d-flex align-items-center justify-content-center gap-5 py-2">
                 <div>
-                  <span className="fSize-2 fw-normal">Share with a friend :</span>
+                  <span className="fSize-2 fw-normal">
+                    Share with a friend :
+                  </span>
                 </div>
                 <div className="d-flex align-items-center gap-3">
-                  <Link href=""><img src="/images/facebookShare.png" alt="" className="" width={20}/></Link>
-                   <Link href=""><img src="/images/Xshare.png" alt="" width={20}/></Link>
-                   <Link href=""><img src="/images/msgShare.png" alt="" width={20}/></Link>
+                  <Link href="">
+                    <img
+                      src="/images/facebookShare.png"
+                      alt=""
+                      className=""
+                      width={20}
+                    />
+                  </Link>
+                  <Link href="">
+                    <img src="/images/Xshare.png" alt="" width={20} />
+                  </Link>
+                  <Link href="">
+                    <img src="/images/msgShare.png" alt="" width={20} />
+                  </Link>
                 </div>
               </div>
             </Col>
