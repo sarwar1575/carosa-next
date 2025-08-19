@@ -8,12 +8,12 @@
         "quality": 140
     },
      {
-        "vehicleHealth": "Overall vehicle health",
+        "vehicleHealth": "Car condition",
         "points": 200,
-        "accidentVehicle": "No",
-        "adometer": "No",
-        "damages": "No",
-        "quality": 140
+        "accidentVehicle": "Core structure intact",
+        "adometer": "Body structure",
+        "damages": "Non flooded",
+        "quality": "Drivetrain"
     },
      {
         "vehicleHealth": "Overall vehicle health",

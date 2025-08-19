@@ -152,6 +152,12 @@ a {
   --inspactions-text-color: #555555CC;
 }
 
+/* p{
+  white-space: normal !important;
+  text-overflow: unset !important;
+  overflow: visible !important;
+} */
+
 /* Navbar css on  */
 .navbar {
   position: fixed !important;
@@ -771,33 +777,76 @@ h6 {
 
   background: linear-gradient(90deg, rgba(5, 50, 78, 1) 6%, rgba(42, 58, 146, 1) 100%);
 }
-.overviewcarplaneListCard{
 
-      gap: 90px !important;
+.overviewcarplaneListCard {
+
+  gap: 90px !important;
 }
+
 /* overview detaile css off  */
 
 /* inspections car sections css on  */
-.inspectionSections{
+.inspectionSections {
   background-color: var(--common-text-color);
 }
-.inspectionCardBox{
+
+.inspectionCardBox {
   background-color: var(--inspection-bg-color);
   border-radius: 0px 20px 0px 20px;
 }
-.hd-jjpst h6{
+
+.hd-jjpst h6 {
   color: var(--call-bg-color);
 }
-.inico{
+
+.inico {
   font-size: 6px;
 }
-.pointsInspection{
+
+.pointsInspection {
   color: var(--inspactions-text-color);
 }
-.carsInspectionsReports p{
+
+.carsInspectionsReports p {
   color: var(--call-bg-color);
 }
+
+.qualityCheck p {
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+  color: #CBCBCB;
+}
+
+.qualityCheck p span {
+  color: var(--call-bg-color);
+}
+
+.viewInspectionReportBtn .in-peton-btn {
+  background-color: var(--call-bg-color);
+}
+
 /* inspections car sections css off  */
+
+/* Highlights of This Car css on  */
+.higlightsCars {
+  background: linear-gradient(90deg, #2A3A92, #8EC73E);
+}
+
+.higlightImg {
+  width: 30px;
+  height: 30px;
+}
+
+.higlightsCarsCard p {
+
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+/* Highlights of This Car css off  */
+
 
 /* Footer css on  */
 .footerMain {

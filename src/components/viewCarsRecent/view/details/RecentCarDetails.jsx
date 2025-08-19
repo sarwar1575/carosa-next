@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import inspectionData from "../../../../data/CarInspection.json";
+import higlightsCars from "../../../../data/HighlightsCars.json";
 import {
   faChevronRight,
   faIndianRupeeSign,
@@ -302,7 +303,7 @@ export default function RecentCarDetails({ car, carIndex }) {
                 </div>
                 <Row>
                   {inspectionData.map((items, index) => (
-                    <Col xl={4} md={6} xs={12} key={index}>
+                    <Col xl={4} md={6} xs={12} key={index} className="pb-3">
                       <div className="inspectionCardBox p-2">
                         <div className="hd-jjpst d-flex gap-2 align-items-center">
                           <img
@@ -311,33 +312,126 @@ export default function RecentCarDetails({ car, carIndex }) {
                             className=""
                             width={15}
                           />
-                          <Link href="" className="d-flex align-items-center gap-2"><h6 className="fSize-2 fw-medium m-0">{items.vehicleHealth}</h6> <FontAwesomeIcon icon={faChevronRight} className="inico"/> </Link> 
+                          <Link
+                            href=""
+                            className="d-flex align-items-center gap-2"
+                          >
+                            <h6 className="fSize-2 fw-medium m-0">
+                              {items.vehicleHealth}
+                            </h6>{" "}
+                            <FontAwesomeIcon
+                              icon={faChevronRight}
+                              className="inico"
+                            />{" "}
+                          </Link>
                         </div>
-                        <span className="pointsInspection fSize-2 fw-semibold">{items.points} points inspected.</span>
+                        <span className="pointsInspection fSize-2 fw-semibold">
+                          {items.points} points inspected.
+                        </span>
                         <div className="pt-2">
-                        <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
-                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
-                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
-                        </div>
-                           <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
-                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
-                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
-                        </div>
-                           <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
-                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
-                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
-                        </div>
-                           <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
-                          <img src="/assets/img/accidentHistoryIcon.png" alt="" className="object-fit-cover" width={30} height={29}/>
-                          <p className="m-0 fSize-2 fw-semibold">{items.accidentVehicle} accident history</p>
-                        </div>
+                          <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                            <img
+                              src="/assets/img/accidentHistoryIcon.png"
+                              alt=""
+                              className="object-fit-cover"
+                              width={30}
+                              height={29}
+                            />
+                            <p className="m-0 fSize-2 fw-semibold">
+                              {items.accidentVehicle} accident history
+                            </p>
+                          </div>
+                          <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                            <img
+                              src="/assets/img/accidentHistoryIcon.png"
+                              alt=""
+                              className="object-fit-cover"
+                              width={30}
+                              height={29}
+                            />
+                            <p className="m-0 fSize-2 fw-semibold">
+                              {items.accidentVehicle} accident history
+                            </p>
+                          </div>
+                          <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                            <img
+                              src="/assets/img/accidentHistoryIcon.png"
+                              alt=""
+                              className="object-fit-cover"
+                              width={30}
+                              height={29}
+                            />
+                            <p className="m-0 fSize-2 fw-semibold">
+                              {items.accidentVehicle} accident history
+                            </p>
+                          </div>
+                          <div className="carsInspectionsReports d-flex align-items-center gap-2 mb-3">
+                            <img
+                              src="/assets/img/accidentHistoryIcon.png"
+                              alt=""
+                              className="object-fit-cover"
+                              width={30}
+                              height={29}
+                            />
+                            <p className="m-0 fSize-2 fw-semibold">
+                              {items.accidentVehicle} accident history
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </Col>
                   ))}
                 </Row>
+                <Row className="justify-content-between">
+                  <Col xl={7}>
+                    <div className="qualityCheck p-2 border rounded-pill d-flex align-items-center gap-2">
+                      <img
+                        src="/assets/img/ckeckquality.png"
+                        alt=""
+                        width={15}
+                      />{" "}
+                      <p className="fSize-2 m-0 fw-semibold">
+                        <span className="fw-bold">CAROSA</span> inspected with
+                        140-quality checks.
+                      </p>
+                    </div>
+                  </Col>
+                  <Col xl={4}>
+                    <div className="viewInspectionReportBtn d-flex justify-content-end">
+                      <Link
+                        href=""
+                        className="in-peton-btn fSize-2 fw-medium text-white py-2 px-4 rounded-2"
+                      >
+                        View inspection report
+                      </Link>
+                    </div>
+                  </Col>
+                </Row>
               </div>
               {/* inspections car sections  */}
+
+              {/* Highlights of This Car sections  */}
+              <div className="higlightsCars rounded-2 mt-4 p-3">
+                <div className="hdTile pb-3">
+                  <h6 className="text-white fSize-6 fw-medium">
+                    Highlights of This Car
+                  </h6>
+                </div>
+                <Row>
+                  {higlightsCars.map((items, index) => (
+                    <Col xl={4} key={index.id || index} className="pb-4">
+                      <div className="higlightsCarsCard d-flex justify-content-center align-items-center flex-column">
+                        <div className="higlightImg rounded-circle bg-white d-flex justify-content-center align-items-center mb-2">
+                          <img src="/assets/img/repaintedcar.png" alt="" width={14}/>
+                        </div>
+                        <h6 className="text-white fSize-5 fw-semibold">{items.heading}</h6>
+                        <p className="text-white text-center fSize-3 fw-normal">{items.title}</p>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+              {/* Highlights of This Car sections  */}
             </Col>
             <Col lg={4} className="position-sticky" style={{ top: "190px" }}>
               <div className="carDetailsMainParent p-3 rounded-3 bg-white position-relative">

@@ -40,11 +40,11 @@ function HomeBanner() {
             <div className="modalTabsListsBtns pt-5">
               <p className="m-0 fSize-6 fw-bold text-white">Or Browse Featured Model</p>
               <div className="modalsBtns mt-3 d-flex align-items-center gap-4">
-                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/suvcar.png" alt="" width={26} className="me-1"/> suv</Link>
-                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/sedancar.png" alt="" width={26} className="me-1"/> Sedan</Link>
-                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/hacthbackcar.png" alt="" width={26} className="me-1"/> Hatchback</Link>
-                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/coupecar.png" alt="" width={26} className="me-1"/> Coupe</Link>
-                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/haybridcar.png" alt="" width={26} className="me-1"/> Hybrid</Link>
+                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/suvcar.png" alt="" width={26} className="me-1"/> Body</Link>
+                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/sedancar.png" alt="" width={26} className="me-1"/> Budget</Link>
+                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/hacthbackcar.png" alt="" width={26} className="me-1"/> Fuel type</Link>
+                {/* <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/coupecar.png" alt="" width={26} className="me-1"/> Coupe</Link>
+                <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/haybridcar.png" alt="" width={26} className="me-1"/> Hybrid</Link> */}
 
               </div>
             </div>
