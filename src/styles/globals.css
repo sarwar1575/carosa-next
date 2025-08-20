@@ -849,16 +849,14 @@ h6 {
 
 /* Features and specs css on  */
 .featuresSections {
-  background-image: url("/images/featuresBg.png");
-  /* yahan apni image ka path dijiye */
-  background-size: cover;
-  /* image ko pura cover karne ke liye */
+  background-image: url(/images/featuresBg.png);
   background-position: center;
-  /* image ko center align karne ke liye */
   background-repeat: no-repeat;
-  object-fit: cover;
+  background-size: cover;
   width: 100%;
-  height: 350px;
+  min-height: 410px;
+  /* starting height */
+  height: auto;
 }
 
 .form-control:focus {
@@ -874,8 +872,8 @@ h6 {
   padding: 16px 30px;
   border-radius: 50px;
   color: var(--common-text-color);
-   font-size: 12px;
-   font-weight: 500;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .featureInputField .featureFill::placeholder {
@@ -896,14 +894,39 @@ h6 {
   border-radius: 50px;
   padding: 11px 30px;
 }
-.features{
+
+.features {
   color: var(--litter-green);
   border-bottom: 2px solid var(--litter-green);
 }
-.specifications{
+
+.specifications {
   border-bottom: 2px solid var(--common-text-color);
 }
+
 /* Features and specs css off  */
+
+/* Accordion css on  */
+.facilityCarosa .accordion .accordion-item .accordion-header button{
+  box-shadow: none !important;
+  /* background-color: var(--call-bg-color) !important; */
+  border: 0px !important;
+}
+.facilityCarosa .accordion .accordion-item{
+  border: 0px !important;
+}
+.facilityCarosa .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed){
+ /* background-color: var(--call-bg-color) !important; 
+ color: var(--common-text-color) !important; */
+ background-color: transparent !important;
+}
+.acc-car{
+color: var(--call-bg-color);
+}
+.acc-osa{
+  color: var(--litter-green);
+}
+/* Accordion css off  */
 
 /* Footer css on  */
 .footerMain {
