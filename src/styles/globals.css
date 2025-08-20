@@ -847,6 +847,63 @@ h6 {
 
 /* Highlights of This Car css off  */
 
+/* Features and specs css on  */
+.featuresSections {
+  background-image: url("/images/featuresBg.png");
+  /* yahan apni image ka path dijiye */
+  background-size: cover;
+  /* image ko pura cover karne ke liye */
+  background-position: center;
+  /* image ko center align karne ke liye */
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+}
+
+.form-control:focus {
+  outline: none !important;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+
+.featureInputField .featureFill {
+  background-color: transparent;
+  border: 1px solid var(--common-text-color) !important;
+  outline: none !important;
+  padding: 16px 30px;
+  border-radius: 50px;
+  color: var(--common-text-color);
+   font-size: 12px;
+   font-weight: 500;
+}
+
+.featureInputField .featureFill::placeholder {
+  color: var(--common-text-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.searchBtn {
+
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.searchBtn button {
+  border-radius: 50px;
+  padding: 11px 30px;
+}
+.features{
+  color: var(--litter-green);
+  border-bottom: 2px solid var(--litter-green);
+}
+.specifications{
+  border-bottom: 2px solid var(--common-text-color);
+}
+/* Features and specs css off  */
 
 /* Footer css on  */
 .footerMain {

@@ -11,7 +11,7 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import Banner from "./comps/Banner";
 
 export default function RecentCarDetails({ car, carIndex }) {
@@ -422,16 +422,62 @@ export default function RecentCarDetails({ car, carIndex }) {
                     <Col xl={4} key={index.id || index} className="pb-4">
                       <div className="higlightsCarsCard d-flex justify-content-center align-items-center flex-column">
                         <div className="higlightImg rounded-circle bg-white d-flex justify-content-center align-items-center mb-2">
-                          <img src="/assets/img/repaintedcar.png" alt="" width={14}/>
+                          <img
+                            src="/assets/img/repaintedcar.png"
+                            alt=""
+                            width={14}
+                          />
                         </div>
-                        <h6 className="text-white fSize-5 fw-semibold">{items.heading}</h6>
-                        <p className="text-white text-center fSize-3 fw-normal">{items.title}</p>
+                        <h6 className="text-white fSize-5 fw-semibold">
+                          {items.heading}
+                        </h6>
+                        <p className="text-white text-center fSize-3 fw-normal">
+                          {items.title}
+                        </p>
                       </div>
                     </Col>
                   ))}
                 </Row>
               </div>
               {/* Highlights of This Car sections  */}
+
+              {/* Features and specs section  */}
+              <div className="featuresSections rounded-2 mt-4 p-3">
+                <div className="hdTile pb-3">
+                  <h6 className="text-white fSize-6 fw-medium">
+                    Highlights of This Car
+                  </h6>
+                </div>
+                <Row className="justify-content-center">
+                  <Col xl={11}>
+                    <div className="featureInputField position-relative">
+                      <Form.Group
+                        className=""
+                        controlId=""
+                      >
+                        <Form.Control
+                        className="featureFill"
+                          type="email"
+                          placeholder="Search for features or specs"
+                        />
+                      </Form.Group>
+                      <div className="searchBtn">
+                        <button type="btn" className="border-0 outline-none bg-white fSize-3 fw-medium"><img src="/images/Search.png" className="me-2" alt="" width={12}/> Search</button>
+                        
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="pt-3">
+                  <Col xl={4}>
+                     <div className="featuresLiks d-flex flex-column">
+                      <Link href="" className="mb-3 pb-1 features fSize-4 fw-medium">Features</Link>
+                      <Link href="" className="specifications pb-1 fSize-4 fw-medium text-white">Specifications</Link>
+                     </div>
+                  </Col>
+                </Row>
+              </div>
+              {/* Features and specs section  */}
             </Col>
             <Col lg={4} className="position-sticky" style={{ top: "190px" }}>
               <div className="carDetailsMainParent p-3 rounded-3 bg-white position-relative">
