@@ -15,7 +15,11 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Banner from "./comps/Banner";
 import AccordionList from "./comps/AccordionList";
 import EMICalculator from "./comps/EMICalculator";
-
+import CarosaKaBharosa from "./comps/CarosaKaBharosa";
+import ExploreOurFullCollection from "@/components/home/ExploreOurFullCollection";
+import Stories from "@/components/home/Stories";
+import AskAssistance from "@/components/home/AskAssistance";
+import MoreExplore from "./comps/MoreExplore";
 
 export default function RecentCarDetails({ car, carIndex }) {
   if (!car) {
@@ -454,74 +458,150 @@ export default function RecentCarDetails({ car, carIndex }) {
                 <Row className="justify-content-center">
                   <Col xl={11}>
                     <div className="featureInputField position-relative">
-                      <Form.Group
-                        className=""
-                        controlId=""
-                      >
+                      <Form.Group className="" controlId="">
                         <Form.Control
-                        className="featureFill"
+                          className="featureFill"
                           type="email"
                           placeholder="Search for features or specs"
                         />
                       </Form.Group>
                       <div className="searchBtn">
-                        <button type="btn" className="border-0 outline-none bg-white fSize-3 fw-medium"><img src="/images/Search.png" className="me-2" alt="" width={12}/> Search</button>
-                        
+                        <button
+                          type="btn"
+                          className="border-0 outline-none bg-white fSize-3 fw-medium"
+                        >
+                          <img
+                            src="/images/Search.png"
+                            className="me-2"
+                            alt=""
+                            width={12}
+                          />{" "}
+                          Search
+                        </button>
                       </div>
                     </div>
                   </Col>
                 </Row>
                 <Row className="pt-3">
                   <Col xl={3}>
-                     <div className="featuresLiks d-flex flex-column">
-                      <Link href="" className="mb-3 pb-1 features fSize-4 fw-medium">Features</Link>
-                      <Link href="" className="specifications pb-1 fSize-4 fw-medium text-white">Specifications</Link>
-                     </div>
+                    <div className="featuresLiks d-flex flex-column">
+                      <Link
+                        href=""
+                        className="mb-3 pb-1 features fSize-4 fw-medium"
+                      >
+                        Features
+                      </Link>
+                      <Link
+                        href=""
+                        className="specifications pb-1 fSize-4 fw-medium text-white"
+                      >
+                        Specifications
+                      </Link>
+                    </div>
                   </Col>
                   <Col xl={4}>
-                  <div>
-                  <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/steering.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">Steering Mounted Controls</p>
-                  </div>
-                   <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/airbag.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">Airbags</p>
-                  </div>
-                    <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/ebd.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">EBD - Electronic Brakeforce Distribution</p>
-                  </div>
-                    <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/central.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">Central Locking</p>
-                  </div>
-                  </div>
+                    <div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/steering.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          Steering Mounted Controls
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/airbag.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          Airbags
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/ebd.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          EBD - Electronic Brakeforce Distribution
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/central.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          Central Locking
+                        </p>
+                      </div>
+                    </div>
                   </Col>
-                     <Col xl={4}>
-                  <div>
-                  <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/bluetooth.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">Bluetooth Compatibility</p>
-                  </div>
-                   <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/abs.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">ABS - Anti-lock Braking System</p>
-                  </div>
-                    <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/airconditions.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">Air Conditioner</p>
-                  </div>
-                    <div className="d-flex align-items-center gap-2 pb-3">
-                    <img src="/assets/img/rearDefoger.png" alt="" width={24} height={24}/>
-                    <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">Rear Defogger</p>
-                  </div>
-                  </div>
+                  <Col xl={4}>
+                    <div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/bluetooth.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          Bluetooth Compatibility
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/abs.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          ABS - Anti-lock Braking System
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/airconditions.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          Air Conditioner
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2 pb-3">
+                        <img
+                          src="/assets/img/rearDefoger.png"
+                          alt=""
+                          width={24}
+                          height={24}
+                        />
+                        <p className="m-0 text-white fSize-3 fw-semibold text-wrap overflow-visible text-overflow-unset">
+                          Rear Defogger
+                        </p>
+                      </div>
+                    </div>
                   </Col>
                   <Col xl={8}>
-                  <p className="m-0 fSize-5 fw-normal text-white text-wrap overflow-hedden text-overflow-unset">Features and specifications bring superior driving experience and comfort.</p>
+                    <p className="m-0 fSize-5 fw-normal text-white text-wrap overflow-hedden text-overflow-unset">
+                      Features and specifications bring superior driving
+                      experience and comfort.
+                    </p>
                   </Col>
-                      <Col xl={4}>
+                  <Col xl={4}>
                     <div className="viewInspectionReportBtn d-flex justify-content-end">
                       <Link
                         href=""
@@ -536,11 +616,15 @@ export default function RecentCarDetails({ car, carIndex }) {
               {/* Features and specs section  */}
 
               {/* Accordion section  */}
-               <AccordionList />
+              <AccordionList />
               {/* Accordion section  */}
 
+              {/* Carosa Bharosa  */}
+              <CarosaKaBharosa />
+              {/* Carosa Bharosa  */}
+
               {/* EMI Calculator  */}
-                  {/* <EMICalculator /> */}
+              {/* <EMICalculator /> */}
               {/* EMI Calculator  */}
             </Col>
             <Col lg={4} className="position-sticky" style={{ top: "190px" }}>
@@ -741,22 +825,21 @@ export default function RecentCarDetails({ car, carIndex }) {
           </Row>
         </Container>
       </section>
+      {/* explore car collections  */}
+      <ExploreOurFullCollection />
+      {/* explore car collections  */}
 
-      {/* <section className="container py-5">
-      <div className="mb-4">
-        <Link href="/" className="text-decoration-none fSize-3">← Back</Link>
-      </div>
+      {/* stori bharosa  */}
+      <Stories />
+      {/* stori bharosa  */}
 
-      <div className="row g-4">
-        <div className="col-lg-7">
-       
-        </div>
+      {/* explore car here  */}
+      <MoreExplore />
+      {/* explore car here  */}
 
-        <div className="col-lg-5">
-     
-        </div>
-      </div>
-    </section> */}
+      {/* assistance  */}
+      <AskAssistance />
+      {/* assistance  */}
     </>
   );
 }
