@@ -12,3 +12,4 @@ pnpm-debug.log*
 
 # Env files
 .env*
+carosa.zip
