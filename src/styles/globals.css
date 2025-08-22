@@ -150,6 +150,7 @@ a {
   --social-text-color: #717272;
   --inspection-bg-color: #E3E3E3;
   --inspactions-text-color: #555555CC;
+  --chat-bg-color: #EEEEEE;
 }
 
 /* p{
@@ -926,7 +927,39 @@ color: var(--call-bg-color);
 .acc-osa{
   color: var(--litter-green);
 }
+.facilityCarosa p{
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
 /* Accordion css off  */
+
+/* chats css on  */
+.ChatBoxMainParent{
+  background-color: var(--chat-bg-color);
+}
+.userProfile{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--common-text-color);
+}
+.offerGivenChat{
+  max-width: 460px;
+  background-color: var(--common-text-color);
+  height: auto;
+  word-wrap: break-word; /* Ensures long words break */
+  overflow-wrap: break-word;
+}
+.offerGivenChat p{
+  white-space: normal;
+  text-overflow: unset;
+  overflow: hidden;
+}
+.rangTitle span, .lable{
+  color: var(--call-bg-color);
+}
+/* chats css off  */
 
 /* Footer css on  */
 .footerMain {

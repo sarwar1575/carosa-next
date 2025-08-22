@@ -20,17 +20,27 @@ import ExploreOurFullCollection from "@/components/home/ExploreOurFullCollection
 import Stories from "@/components/home/Stories";
 import AskAssistance from "@/components/home/AskAssistance";
 import MoreExplore from "./comps/MoreExplore";
+import { useSelectedCar } from "@/store/selectedCar";
 
 export default function RecentCarDetails({ car, carIndex }) {
-  if (!car) {
-    return (
-      <section className="container py-5">
-        <h2 className="text-white">No car selected</h2>
-        <p className="text-white-50">Open this page from the listing.</p>
-      </section>
-    );
-  }
+  // if (!car) {
+  //   return (
+  //     <section className="container py-5">
+  //       <h2 className="text-white">No car selected</h2>
+  //       <p className="text-white-50">Open this page from the listing.</p>
+  //     </section>
+  //   );
+  // }
+const { setCar } = useSelectedCar();
 
+const handlePrepareOfferData = () => {
+  setCar(car);
+  if (typeof window !== "undefined") {
+    try {
+      sessionStorage.setItem("selectedCar", JSON.stringify(car));
+    } catch {}
+  }
+};
   // JSON keys ko yahin map kar lo (aapke list component ke hisaab se)
   const image = car.image;
   const brand = car.brand;
@@ -769,12 +779,14 @@ export default function RecentCarDetails({ car, carIndex }) {
                       </button>
                     </div>
                     <div className="bestOffers">
-                      <button
-                        type="btn"
-                        className="offerHere text-white fSize-2 fw-semibold py-2 px-4 "
-                      >
-                        Make Best Offer
-                      </button>
+                   <Link
+    href={`/make-offer${carIndex !== undefined ? `?carId=${carIndex}` : ""}`}
+    prefetch={false}
+    onClick={handlePrepareOfferData}
+    className="offerHere text-white fSize-2 fw-semibold py-2 px-4 "
+  >
+    Make Best Offer
+  </Link>
                     </div>
                   </div>
                 </div>
