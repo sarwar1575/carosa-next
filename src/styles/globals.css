@@ -1015,6 +1015,27 @@ h6 {
 
 /* chats css off  */
 
+/* Dealers Page Css on  */
+.dealerBanner h1{
+  border-bottom: 2px dashed var(--common-text-color);
+}
+.dealerBannerPositions{
+  position: absolute;
+  top: 10%;
+  left: 0;
+}
+.detailsBox{
+  border-radius: 0px 50px 0px 50px;
+}
+.listingButton_del .createList{
+  background-color: var(--litter-green);
+}
+.dealerBan_img_dx img{
+  min-height: 740px;
+  height: auto;
+}
+/* Dealers Page Css off  */
+
 /* Footer css on  */
 .footerMain {
 
