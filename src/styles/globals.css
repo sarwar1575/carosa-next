@@ -1016,24 +1016,58 @@ h6 {
 /* chats css off  */
 
 /* Dealers Page Css on  */
-.dealerBanner h1{
+.dealerBanner h1 {
   border-bottom: 2px dashed var(--common-text-color);
 }
-.dealerBannerPositions{
+
+.dealerBannerPositions {
   position: absolute;
   top: 10%;
   left: 0;
 }
-.detailsBox{
+
+.detailsBox {
   border-radius: 0px 50px 0px 50px;
 }
-.listingButton_del .createList{
+
+.listingButton_del .createList {
   background-color: var(--litter-green);
 }
-.dealerBan_img_dx img{
+
+.dealerBan_img_dx img {
   min-height: 740px;
   height: auto;
 }
+
+.popup-box {
+  z-index: 100;
+  min-width: 470px;
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  margin-top: 8px;
+  padding: 12px 20px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.close-icon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
 /* Dealers Page Css off  */
 
 /* Footer css on  */

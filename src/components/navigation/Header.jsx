@@ -15,12 +15,13 @@ import {
 } from "react-bootstrap";
 import { FaBars, FaChevronDown, FaMapMarkerAlt } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [countryOpen, setCountryOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const countryRef = useRef(null); // <-- no TS generics
+  const [showCall, setShowCall] = useState(false);
 
   // close country dropdown on outside click / Esc
   useEffect(() => {
@@ -46,7 +47,11 @@ export default function Header() {
         <Container fluid>
           <Row className="w-100 align-items-center">
             {/* LEFT: burger (mobile) + logo + desktop nav */}
-            <Col xxl={6} xs={4} className="d-flex align-items-center gap-3 gap-lg-5">
+            <Col
+              xxl={6}
+              xs={4}
+              className="d-flex align-items-center gap-3 gap-lg-5"
+            >
               {/* mobile menu button */}
               <button
                 className="btn btn-link p-0 d-inline-flex d-xxl-none align-items-center me-1"
@@ -83,23 +88,39 @@ export default function Header() {
                     </Link>
 
                     {/* mega menu */}
-                    <div className="mega-menu" role="menu" aria-label="Buy used car">
+                    <div
+                      className="mega-menu"
+                      role="menu"
+                      aria-label="Buy used car"
+                    >
                       <div className="container py-3">
                         <div className="row gx-4">
                           <div className="col-12 col-md-6">
                             <h6 className="mega-heading">By Brand</h6>
                             <ul className="list-unstyled m-0">
-                              <li className="py-1"><Link href="#">Toyota</Link></li>
-                              <li className="py-1"><Link href="#">Honda</Link></li>
-                              <li className="py-1"><Link href="#">BMW</Link></li>
+                              <li className="py-1">
+                                <Link href="#">Toyota</Link>
+                              </li>
+                              <li className="py-1">
+                                <Link href="#">Honda</Link>
+                              </li>
+                              <li className="py-1">
+                                <Link href="#">BMW</Link>
+                              </li>
                             </ul>
                           </div>
                           <div className="col-12 col-md-6">
                             <h6 className="mega-heading">By Price</h6>
                             <ul className="list-unstyled m-0">
-                              <li className="py-1"><Link href="#">Under ₹5L</Link></li>
-                              <li className="py-1"><Link href="#">₹5L – ₹10L</Link></li>
-                              <li className="py-1"><Link href="#">₹10L+</Link></li>
+                              <li className="py-1">
+                                <Link href="#">Under ₹5L</Link>
+                              </li>
+                              <li className="py-1">
+                                <Link href="#">₹5L – ₹10L</Link>
+                              </li>
+                              <li className="py-1">
+                                <Link href="#">₹10L+</Link>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -137,7 +158,12 @@ export default function Header() {
                 <div className="navSearchInput d-none d-md-block">
                   <InputGroup className="position-relative">
                     <span className="searchIconWrap">
-                      <Image src="/images/Search.png" alt="search" width={16} height={16} />
+                      <Image
+                        src="/images/Search.png"
+                        alt="search"
+                        width={16}
+                        height={16}
+                      />
                     </span>
                     <Form.Control
                       placeholder="Search for your wish"
@@ -165,11 +191,21 @@ export default function Header() {
                   {countryOpen && (
                     <div className="dropdown-menu show">
                       <ul className="countryLists p-0 m-0">
-                        <li><button className="dropdown-item">India</button></li>
-                        <li><button className="dropdown-item">USA</button></li>
-                        <li><button className="dropdown-item">Canada</button></li>
-                        <li><button className="dropdown-item">UK</button></li>
-                        <li><button className="dropdown-item">Australia</button></li>
+                        <li>
+                          <button className="dropdown-item">India</button>
+                        </li>
+                        <li>
+                          <button className="dropdown-item">USA</button>
+                        </li>
+                        <li>
+                          <button className="dropdown-item">Canada</button>
+                        </li>
+                        <li>
+                          <button className="dropdown-item">UK</button>
+                        </li>
+                        <li>
+                          <button className="dropdown-item">Australia</button>
+                        </li>
                       </ul>
                     </div>
                   )}
@@ -177,21 +213,43 @@ export default function Header() {
 
                 {/* call button (desktop/tablet) */}
                 <button
-                  
+                  onClick={() => setShowCall(!showCall)}
                   className="callBtn d-none d-md-inline-flex align-items-center gap-2 text-white border-0 outline-none rounded-3 fSize-3"
                 >
-                  <Image src="/images/callicon.png" alt="call" width={12} height={12} />
+                  <Image
+                    src="/images/callicon.png"
+                    alt="call"
+                    width={12}
+                    height={12}
+                  />
                   Call us
                 </button>
-
+               
+                  <div className={`popup-box ${showCall ? "show" : ""}`}>
+                    <div className="position-relative">
+                    <FontAwesomeIcon icon={faXmark} className="close-icon" onClick={() => setShowCall(false)}/>
+                    <p className="fSize-3 fw-medium text-dark">Connect With Us:</p>
+                    <p className="fSize-3 fw-medium text-dark">Want the best car advice?</p>
+                     <p className="fSize-3 fw-medium text-dark">Connect with us at +91-9090909090</p>
+                    </div>
+                  </div>
+              
                 {/* user pill (sm+) */}
                 <div className="userNameHere d-none d-sm-flex align-items-center gap-2">
                   <div className="userProfile rounded-circle d-flex align-items-center justify-content-center">
-                    <Image src="/images/userPRofile.png" alt="user" width={20} height={20}/>
+                    <Image
+                      src="/images/userPRofile.png"
+                      alt="user"
+                      width={20}
+                      height={20}
+                    />
                   </div>
                   <div className="userName d-flex align-items-center gap-1">
                     <p className="m-0 fw-medium fSize-3">username</p>
-                    <FontAwesomeIcon icon={faCaretDown} className="dropUserIcon" />
+                    <FontAwesomeIcon
+                      icon={faCaretDown}
+                      className="dropUserIcon"
+                    />
                   </div>
                 </div>
               </div>
@@ -222,7 +280,12 @@ export default function Header() {
             <div className="mb-3">
               <InputGroup className="position-relative">
                 <span className="searchIconWrap">
-                  <Image src="/images/Search.png" alt="search" width={16} height={16} />
+                  <Image
+                    src="/images/Search.png"
+                    alt="search"
+                    width={16}
+                    height={16}
+                  />
                 </span>
                 <Form.Control
                   placeholder="Search for your wish"
@@ -264,17 +327,29 @@ export default function Header() {
                   <div className="mb-3">
                     <h6 className="mb-2">By Brand</h6>
                     <div className="d-grid gap-2">
-                      <Link href="#" onClick={() => setMenuOpen(false)}>Toyota</Link>
-                      <Link href="#" onClick={() => setMenuOpen(false)}>Honda</Link>
-                      <Link href="#" onClick={() => setMenuOpen(false)}>BMW</Link>
+                      <Link href="#" onClick={() => setMenuOpen(false)}>
+                        Toyota
+                      </Link>
+                      <Link href="#" onClick={() => setMenuOpen(false)}>
+                        Honda
+                      </Link>
+                      <Link href="#" onClick={() => setMenuOpen(false)}>
+                        BMW
+                      </Link>
                     </div>
                   </div>
                   <div>
                     <h6 className="mb-2">By Price</h6>
                     <div className="d-grid gap-2">
-                      <Link href="#" onClick={() => setMenuOpen(false)}>Under ₹5L</Link>
-                      <Link href="#" onClick={() => setMenuOpen(false)}>₹5L – ₹10L</Link>
-                      <Link href="#" onClick={() => setMenuOpen(false)}>₹10L+</Link>
+                      <Link href="#" onClick={() => setMenuOpen(false)}>
+                        Under ₹5L
+                      </Link>
+                      <Link href="#" onClick={() => setMenuOpen(false)}>
+                        ₹5L – ₹10L
+                      </Link>
+                      <Link href="#" onClick={() => setMenuOpen(false)}>
+                        ₹10L+
+                      </Link>
                     </div>
                   </div>
                 </Accordion.Body>
@@ -283,14 +358,18 @@ export default function Header() {
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Sell car</Accordion.Header>
                 <Accordion.Body>
-                  <Link href="/sell" onClick={() => setMenuOpen(false)}>Go to Sell</Link>
+                  <Link href="/sell" onClick={() => setMenuOpen(false)}>
+                    Go to Sell
+                  </Link>
                 </Accordion.Body>
               </Accordion.Item>
 
               <Accordion.Item eventKey="2">
                 <Accordion.Header>New cars</Accordion.Header>
                 <Accordion.Body>
-                  <Link href="/new-cars" onClick={() => setMenuOpen(false)}>Go to New Cars</Link>
+                  <Link href="/new-cars" onClick={() => setMenuOpen(false)}>
+                    Go to New Cars
+                  </Link>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
