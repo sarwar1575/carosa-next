@@ -31,16 +31,16 @@ export default function RecentCarDetails({ car, carIndex }) {
   //     </section>
   //   );
   // }
-const { setCar } = useSelectedCar();
+  const { setCar } = useSelectedCar();
 
-const handlePrepareOfferData = () => {
-  setCar(car);
-  if (typeof window !== "undefined") {
-    try {
-      sessionStorage.setItem("selectedCar", JSON.stringify(car));
-    } catch {}
-  }
-};
+  const handlePrepareOfferData = () => {
+    setCar(car);
+    if (typeof window !== "undefined") {
+      try {
+        sessionStorage.setItem("selectedCar", JSON.stringify(car));
+      } catch {}
+    }
+  };
   // JSON keys ko yahin map kar lo (aapke list component ke hisaab se)
   const image = car.image;
   const brand = car.brand;
@@ -99,14 +99,16 @@ const handlePrepareOfferData = () => {
                   style={{ maxHeight: 487 }}
                 />
               </div>
-
               {/* Car overview section  */}
-
-              <div className="carOverView rounded-2 mt-4 p-3">
+              <div className="bg-white p-3 mt-3">
+              <Col xs={12} className="">
                 <div className="hdTile pb-2">
-                  <h6 className="text-white fSize-6 fw-medium">Car Overview</h6>
+                  <h6 className="fSize-6 fw-medium">Car Info</h6>
                 </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
+              </Col>
+
+              <Row className="carOverView m-0 p-3">
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -125,6 +127,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -143,6 +147,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -161,8 +167,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -181,6 +187,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -199,6 +207,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -215,8 +225,8 @@ const handlePrepareOfferData = () => {
                       <p className="text-white fSize-4 fw-semibold m-0">1st</p>
                     </div>
                   </div>
-                </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center border-bottom pb-3">
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -235,6 +245,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -251,6 +263,8 @@ const handlePrepareOfferData = () => {
                       <p className="text-white fSize-4 fw-semibold m-0">No</p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -269,8 +283,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center">
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -289,6 +303,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -307,7 +323,8 @@ const handlePrepareOfferData = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Col>
+              </Row>
               </div>
               {/* Car overview section  */}
 
@@ -779,14 +796,16 @@ const handlePrepareOfferData = () => {
                       </button>
                     </div>
                     <div className="bestOffers">
-                   <Link
-    href={`/make-offer${carIndex !== undefined ? `?carId=${carIndex}` : ""}`}
-    prefetch={false}
-    onClick={handlePrepareOfferData}
-    className="offerHere text-white fSize-2 fw-semibold py-2 px-4 "
-  >
-    Make Best Offer
-  </Link>
+                      <Link
+                        href={`/make-offer${
+                          carIndex !== undefined ? `?carId=${carIndex}` : ""
+                        }`}
+                        prefetch={false}
+                        onClick={handlePrepareOfferData}
+                        className="offerHere text-white fSize-2 fw-semibold py-2 px-4 "
+                      >
+                        Make Best Offer
+                      </Link>
                     </div>
                   </div>
                 </div>

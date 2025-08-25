@@ -777,6 +777,7 @@ h6 {
 .carOverView {
 
   background: linear-gradient(90deg, rgba(5, 50, 78, 1) 6%, rgba(42, 58, 146, 1) 100%);
+  border-radius: 0px 50px 0px 50px;
 }
 
 .overviewcarplaneListCard {
@@ -908,57 +909,110 @@ h6 {
 /* Features and specs css off  */
 
 /* Accordion css on  */
-.facilityCarosa .accordion .accordion-item .accordion-header button{
+.facilityCarosa .accordion .accordion-item .accordion-header button {
   box-shadow: none !important;
   /* background-color: var(--call-bg-color) !important; */
   border: 0px !important;
 }
-.facilityCarosa .accordion .accordion-item{
+
+.facilityCarosa .accordion .accordion-item {
   border: 0px !important;
 }
-.facilityCarosa .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed){
- /* background-color: var(--call-bg-color) !important; 
+
+.facilityCarosa .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  /* background-color: var(--call-bg-color) !important; 
  color: var(--common-text-color) !important; */
- background-color: transparent !important;
+  background-color: transparent !important;
 }
-.acc-car{
-color: var(--call-bg-color);
+
+.acc-car {
+  color: var(--call-bg-color);
 }
-.acc-osa{
+
+.acc-osa {
   color: var(--litter-green);
 }
-.facilityCarosa p{
+
+.facilityCarosa p {
   white-space: normal;
   text-overflow: unset;
   overflow: visible;
 }
+
 /* Accordion css off  */
 
 /* chats css on  */
-.ChatBoxMainParent{
+.ChatBoxMainParent {
   background-color: var(--chat-bg-color);
 }
-.userProfile{
+
+.userProfile {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: var(--common-text-color);
 }
-.offerGivenChat{
+
+.offerGivenChat {
   max-width: 460px;
   background-color: var(--common-text-color);
   height: auto;
-  word-wrap: break-word; /* Ensures long words break */
+  word-wrap: break-word;
+  /* Ensures long words break */
   overflow-wrap: break-word;
 }
-.offerGivenChat p{
+
+.offerGivenChat p {
   white-space: normal;
   text-overflow: unset;
   overflow: hidden;
 }
-.rangTitle span, .lable{
+
+.rangTitle span,
+.lable {
   color: var(--call-bg-color);
 }
+
+.rangTitleBt span,
+.lable {
+  color: #888888;
+}
+
+.rang_main {
+  width: 100%;
+  appearance: none;
+  background: var(--call-bg-color);
+  height: 2px;
+  border-radius: 5px;
+}
+
+.rang_main::-webkit-slider-runnable-track {
+  background: var(--call-bg-color);
+  height: 6px;
+  border-radius: 5px;
+}
+
+.rang_main::-moz-range-track {
+  background: var(--call-bg-color);
+  height: 6px;
+  border-radius: 5px;
+}
+
+.rang_main::-webkit-slider-thumb {
+  appearance: none;
+  background: white;
+  background: var(--call-bg-color);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-range:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 /* chats css off  */
 
 /* Footer css on  */

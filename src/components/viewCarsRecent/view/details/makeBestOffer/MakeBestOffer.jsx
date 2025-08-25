@@ -42,13 +42,14 @@ export default function MakeBestOffer() {
                   style={{ maxHeight: 400 }}
                 />
               </div>
-              {/* Car overview section  */}
-
-              <div className="carOverView rounded-2 mt-4 p-3">
+              <Col xs={12} className="mt-3">
                 <div className="hdTile pb-2">
-                  <h6 className="text-white fSize-6 fw-medium">Car Overview</h6>
+                  <h6 className="fSize-6 fw-medium">Car Info</h6>
                 </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center pb-3">
+              </Col>
+              {/* Car overview section  */}
+              <Row className="carOverView m-0 p-3">
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -67,6 +68,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -85,6 +88,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -103,8 +108,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center pb-3">
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -123,6 +128,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -141,6 +148,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -157,8 +166,8 @@ export default function MakeBestOffer() {
                       <p className="text-white fSize-4 fw-semibold m-0">1st</p>
                     </div>
                   </div>
-                </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center pb-3">
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -177,6 +186,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -193,6 +204,8 @@ export default function MakeBestOffer() {
                       <p className="text-white fSize-4 fw-semibold m-0">No</p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -211,8 +224,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="overviewcarplaneListCard d-flex align-items-center">
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -231,6 +244,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
+                </Col>
+                <Col lg={4} className="pb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className="iconOverview">
                       <img
@@ -249,8 +264,8 @@ export default function MakeBestOffer() {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
+                </Col>
+              </Row>
               {/* Car overview section  */}
             </Col>
             <Col lg={5}>
@@ -275,13 +290,20 @@ export default function MakeBestOffer() {
                   <Col lg={9}>
                     <div className="priceRang">
                       <div className="rangTitle d-flex justify-content-between align-items-center">
-                        <Form.Label className="fSize-3 fw-semibold lable">Range</Form.Label>
+                        <Form.Label className="fSize-3 fw-semibold lable">
+                          Range
+                        </Form.Label>
                         <span className="fSize-3 fw-semibold">₹ 7,14,400</span>
                       </div>
-                      <Form.Range />
+                      <div className="multiRang position-relative">
+                        <Form.Range className="rang_main"/>
+                      </div>
+
                       <div className="rangTitleBt d-flex justify-content-between align-items-center">
-                        <Form.Label className="fSize-3 fw-semibold">₹ 1,00,000</Form.Label>
-                        <span className="fSize-3 fw-semibold">₹ 8,93,000</span>
+                        <Form.Label className="fSize-2 fw-semibold lable">
+                          ₹ 1,00,000
+                        </Form.Label>
+                        <span className="fSize-2 fw-semibold">₹ 8,93,000</span>
                       </div>
                     </div>
                   </Col>
@@ -304,5 +326,3 @@ export default function MakeBestOffer() {
     </>
   );
 }
-
-
