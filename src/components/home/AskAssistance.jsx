@@ -103,15 +103,15 @@ function AskAssistance() {
                 </Col>
                 {gupshup.map((items, index) => (
                   <Col xl={3} key={index}>
-                    <div className="gupshupCardParent">
-                      <div className="card border-0">
+                    <div className="gupshupCardParent h-100">
+                      <div className="card border-0 h-100">
                         <img
                           src={items.image}
                           alt=""
                           className="w-100 object-fit-cover"
                         />
                         <div className="card-body position-relative">
-                          <p className="m-0 fSize-3 fw-semibold">
+                          <p className="m-0 fSize-3 fw-semibold text-wrap">
                             {items.discriptions}
                           </p>
                           <div className="dottetDropdown">

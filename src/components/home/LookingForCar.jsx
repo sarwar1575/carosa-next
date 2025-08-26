@@ -20,7 +20,7 @@ function LookingForCar() {
                   />
                   <div className="titles pe-5">
                     <h1 className="text-white fSize-11 fw-bold">{items.heading}</h1>
-                    <p className="text-white fSize-5 fw-semibold">{items.paragraph}</p>
+                    <p className="text-white fSize-5 fw-semibold text-wrap">{items.paragraph}</p>
                     <div className="bookBtn mt-5">
                         <Link href={items.slug} className="fSize-3 fw-medium buyBtn text-dark">Get Started <img src="/images/arrowRight.png" alt="" width={14} className="ms-2"/></Link>
                     </div>

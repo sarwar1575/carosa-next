@@ -297,10 +297,11 @@ a {
 
 .inputBody input {
   border: 1px dashed var(--card-unique-color);
+  outline: none;
 }
 
 .inputBody input::placeholder {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   color: var(--input-color);
 }
@@ -640,7 +641,7 @@ p {
 
 .gupshupCardParent .card img {
 
-  height: 290px;
+  height: 265px;
 }
 
 .gupshupCardParent .card img {
@@ -1141,8 +1142,8 @@ h6 {
 /* Footer css on  */
 .footerMain {
 
-  /* background-color: var(--main-bg-color); */
-  background: linear-gradient(0deg, rgba(142, 199, 62, 0.71) 0%, rgba(42, 58, 146, 0.9) 69%);
+  background-color: var(--main-bg-color);
+  /* background: linear-gradient(0deg, rgba(142, 199, 62, 0.71) 0%, rgba(42, 58, 146, 0.9) 69%); */
 }
 
 .footerLog h3::before {

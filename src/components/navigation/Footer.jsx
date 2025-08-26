@@ -26,27 +26,27 @@ function Footer() {
                 <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">about us</Link>
                 </li>
-                <li className="list-items pb-2">
+                {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Careers</Link>
-                </li>
-                <li className="list-items pb-2">
+                </li> */}
+                {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Press kit</Link>
-                </li>
+                </li> */}
                   <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Blog</Link>
                 </li>
-                  <li className="list-items pb-2">
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Article</Link>
-                </li>
-                  <li className="list-items pb-2">
+                </li> */}
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">News</Link>
-                </li>
+                </li> */}
                   <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Privacy Policy</Link>
                 </li>
-                  <li className="list-items pb-2">
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Sustainability</Link>
-                </li>
+                </li> */}
                   <li className="list-items pb-4">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Testimonials</Link>
                 </li>
@@ -63,24 +63,24 @@ function Footer() {
                 <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Sell used car</Link>
                 </li>
-                <li className="list-items pb-2">
+                {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Used car valuation</Link>
-                </li>
-                  <li className="list-items pb-2">
+                </li> */}
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Motor insurance</Link>
-                </li>
-                  <li className="list-items pb-2">
+                </li> */}
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Check & pay challan</Link>
-                </li>
-                  <li className="list-items pb-2">
+                </li> */}
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Check vehicle details</Link>
-                </li>
+                </li> */}
                   <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Explore new cars</Link>
                 </li>
-                  <li className="list-items pb-4">
+                  {/* <li className="list-items pb-4">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Scrap your car</Link>
-                </li>
+                </li> */}
               </ul>
               </div>
             </Col>
@@ -97,12 +97,12 @@ function Footer() {
                 <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Contact us</Link>
                 </li>
-                  <li className="list-items pb-2">
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Become a partner</Link>
-                </li>
-                  <li className="list-items pb-2">
+                </li> */}
+                  {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">RC transfer status</Link>
-                </li>
+                </li> */}
                   <li className="list-items pb-4">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Terms & conditions</Link>
                 </li>
