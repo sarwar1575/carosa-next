@@ -16,6 +16,7 @@ import {
 import { FaBars, FaChevronDown, FaMapMarkerAlt } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faXmark } from "@fortawesome/free-solid-svg-icons";
+import CallUsForm from "../common/CallUsForm";
 
 export default function Header() {
   const [countryOpen, setCountryOpen] = useState(false);
@@ -226,12 +227,19 @@ export default function Header() {
                 </button>
                
                   <div className={`popup-box ${showCall ? "show" : ""}`}>
-                    <div className="position-relative">
+                    <div className="position-relative pb-4">
                     <FontAwesomeIcon icon={faXmark} className="close-icon" onClick={() => setShowCall(false)}/>
-                    <p className="fSize-3 fw-medium text-dark">Connect With Us:</p>
-                    <p className="fSize-3 fw-medium text-dark">Want the best car advice?</p>
-                     <p className="fSize-3 fw-medium text-dark">Connect with us at +91-9090909090</p>
+                    <p className="fSize-3 fw-normal text-dark fst-italic">Connect With Us:</p>
+                    <p className="fSize-3 fw-semibold text-dark m-0">Want the best car advice?</p>
+                     <p className="fSize-3 fw-semibold text-dark m-0">Connect with us at <span>+91-9090909090</span></p>
                     </div>
+                    <div className="OrLine border-bottom position-relative mb-4">
+                      <div className="Or rounded-circle text-white d-flex justify-content-center align-items-center fSize-3 fw-medium">Or</div>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                      <p className="fSize-4 fw-semibold text-dark">Request a Call Back</p>
+                    </div>
+                    <CallUsForm />
                   </div>
               
                 {/* user pill (sm+) */}

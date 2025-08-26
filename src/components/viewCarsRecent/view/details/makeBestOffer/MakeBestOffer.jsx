@@ -313,6 +313,7 @@ export default function MakeBestOffer() {
                     </div>
                   </div>
                 </div>
+                <div className="chatBodyMain">
                 <div className="offerGivenChat py-3 px-4 my-3 rounded-4">
                   <h6 className="text-center fSize-4 fw-bold text-black">
                     Offer Given
@@ -464,7 +465,83 @@ export default function MakeBestOffer() {
                     </div>
                   </div>
                 </div>
-                <Row className="align-items-center">
+                   <div className="">
+                  <div className="offerGivenChat rejectionOffer py-3 px-4 my-3 rounded-4">
+                    <div className="d-flex justify-content-between align-items-center pb-3">
+                      <h6 className="fSize-4 fw-bold text-black">
+                        Offer Given
+                      </h6>
+                      <Button
+                        type="btn"
+                        className="accepted__offer border-0 outline-none rounded-pill fSize-3 fw-medium text-dark py-1"
+                      >
+                        Accepted Offer
+                      </Button>
+                    </div>
+                    <div className="d-flex gap-2 align-items-center pb-2">
+                      <span className="fSize-3 fw-normal text-black">
+                        Car Name:
+                      </span>
+                      <p className="m-0 fSize-4 fw-bold text-black">
+                        2023 Mahindra XUV300
+                      </p>
+                    </div>
+                    <strong className="fSize-3 text-dark">Note:</strong>
+                    <p className="fSize-2 fw-normal">
+                      Lorem ipsum is a dummy or placeholder text commonly used
+                      in graphic design,
+                    </p>
+                    <div className="footerDetails">
+                      <div className="d-flex align-items-center justify-content-between">
+                        <div className="">
+                          <div className="d-flex gap-2 align-items-center mb-1">
+                            <span className="fSize-3 fw-normal validText">
+                              Valid Until:
+                            </span>
+                            <p className="m-0 fSize-3 fw-bold text-black">
+                              May 25, 2025
+                            </p>
+                          </div>
+                          <div className="viewCarosaBisk pb-4">
+                            <span className="text-white m-0 py-1 px-3 fSize-2 fw-normal">
+                              CAROSA Partner
+                            </span>
+                          </div>
+                        </div>
+                        <div className="">
+                          <div className="d-flex gap-1 align-items-center justify-content-end">
+                            {/* <img src=" alt="" /> */}
+                            <Image
+                              src="/images/price.png"
+                              width={21}
+                              height={21}
+                            />
+                            <div className="roadPrice">
+                              <h6 className="m-0 fsSize-7-5 fw-semibold">
+                                90,000,0
+                              </h6>
+                            </div>
+                          </div>
+                          <div className="dateFormate">
+                            <span className="dateTime fSize-2 fw-normal">
+                              12 July, 2025, 12:04 PM
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="optionsBtn d-flex justify-content-end align-items-center">
+                        {/* <div className="acceptBtn">
+                          <Button type="btn" className="accepted py-2 px-4 border-0 outline-none fSize-3 fw-semibold text-white">Accept Offer</Button>
+                        </div> */}
+                        <div className="payingBtn">
+                          <Button type="btn" className="pay py-2 px-4 border-0 outline-none fSize-3 fw-semibold text-white">Pay Now</Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <Row className="align-items-center py-3">
                   <Col lg={9}>
                     <div className="priceRang">
                       <div className="rangTitle d-flex justify-content-between align-items-center">

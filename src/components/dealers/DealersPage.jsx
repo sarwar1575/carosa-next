@@ -6,6 +6,7 @@ import OurMission from "../home/OurMission";
 import Stories from "../home/Stories";
 import BharosaOfCarosa from "../sell/BharosaOfCarosa";
 import CarosaWork from "../sell/CarosaWork";
+import ChoseCarosa from "../sell/ChoseCarosa";
 import DealersBanner from "./DealersBanner";
 
 function DealersPage() {
@@ -13,6 +14,7 @@ function DealersPage() {
     <>
       <DealersBanner />
       <Advertisement />
+      <ChoseCarosa />
       <CarosaWork />
       <BharosaOfCarosa />
       <Stories />

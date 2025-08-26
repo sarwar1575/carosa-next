@@ -285,6 +285,28 @@ a {
   font-size: 10px;
 }
 
+.Or {
+  width: 30px;
+  height: 30px;
+  background-color: var(--input-color);
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.inputBody input {
+  border: 1px dashed var(--card-unique-color);
+}
+
+.inputBody input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--input-color);
+}
+.callMeBackBtn button{
+  background-color: var(--call-bg-color);
+}
 /* Navbar css off  */
 
 /* Banner css on  */
@@ -1014,24 +1036,51 @@ h6 {
   box-shadow: none !important;
   outline: none !important;
 }
-.rejectionBtn{
+
+.rejectionBtn {
   background-color: var(--bg-danger-color) !important;
 }
-.waiting__response{
+
+.waiting__response {
   background-color: var(--waiting-bg-color) !important;
 }
-.accepted{
+
+.accepted {
   background-color: var(--inspactions-text-color) !important;
 }
-.pay{
+
+.pay {
   background-color: var(--call-bg-color) !important;
 }
-.validText{
+
+.accepted__offer {
+  background-color: var(--litter-green);
+}
+
+.validText {
   color: var(--bg-danger-color);
 }
-.dateTime{
+
+.dateTime {
   color: var(--rateing-bg-color);
 }
+
+.chatBodyMain {
+  height: 400px;
+  /* Set your desired height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  scrollbar-width: none;
+  /* Firefox - hide scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge - hide scrollbar */
+}
+
+.chatBodyMain::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera - hide scrollbar */
+}
+
 /* chats css off  */
 
 /* Dealers Page Css on  */
@@ -1065,7 +1114,7 @@ h6 {
   top: 80px;
   right: 80px;
   margin-top: 8px;
-  padding: 12px 20px;
+  padding: 20px 25px;
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
