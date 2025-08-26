@@ -151,6 +151,8 @@ a {
   --inspection-bg-color: #E3E3E3;
   --inspactions-text-color: #555555CC;
   --chat-bg-color: #EEEEEE;
+  --bg-danger-color: #ED1C53;
+  --waiting-bg-color: #FFDE33;
 }
 
 /* p{
@@ -954,7 +956,7 @@ h6 {
 }
 
 .offerGivenChat {
-  max-width: 460px;
+  max-width: 440px;
   background-color: var(--common-text-color);
   height: auto;
   word-wrap: break-word;
@@ -1012,7 +1014,24 @@ h6 {
   box-shadow: none !important;
   outline: none !important;
 }
-
+.rejectionBtn{
+  background-color: var(--bg-danger-color) !important;
+}
+.waiting__response{
+  background-color: var(--waiting-bg-color) !important;
+}
+.accepted{
+  background-color: var(--inspactions-text-color) !important;
+}
+.pay{
+  background-color: var(--call-bg-color) !important;
+}
+.validText{
+  color: var(--bg-danger-color);
+}
+.dateTime{
+  color: var(--rateing-bg-color);
+}
 /* chats css off  */
 
 /* Dealers Page Css on  */
