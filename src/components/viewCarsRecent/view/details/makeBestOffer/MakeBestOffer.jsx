@@ -374,6 +374,7 @@ export default function MakeBestOffer() {
                             className=""
                             width={21}
                             height={21}
+                            alt=""
                           />
                           <div className="roadPrice">
                             <h6 className="m-0 fsSize-7-5 fw-semibold">
