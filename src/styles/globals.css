@@ -1163,6 +1163,67 @@ h6 {
 
 /* Dealers Page Css off  */
 
+/* registration form css on  */
+.registrationFormBody{
+  border-radius: 30px 0px 30px 0px;
+}
+.carBasicDetails h6 {
+  border-radius: 50px 0px 50px 0px;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  color: var(--litter-green);
+}
+
+.carBasicDetails h6::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  background-color: var(--call-bg-color);
+  border-radius: 50px 0px 50px 0px;
+
+}
+
+.carBasicDetails h6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80px;
+  background-color: #BABABAB2;
+  border-radius: 50px 0px 50px 0px;
+}
+
+.quadrat {
+  width: 20px;
+  height: 20px;
+  -webkit-animation: NAME-YOUR-ANIMATION 4s infinite;
+  /* Safari 4+ */
+  -moz-animation: NAME-YOUR-ANIMATION 4s infinite;
+  /* Fx 5+ */
+  -o-animation: NAME-YOUR-ANIMATION 4s infinite;
+  /* Opera 12+ */
+  animation: NAME-YOUR-ANIMATION 4s infinite;
+  /* IE 10+, Fx 29+ */
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.me__tx .ma_entr{
+  color: var(--call-bg-color);
+  text-decoration: underline !important;
+}
+.priveBtn button{
+  border: 1px solid var(--call-bg-color);
+  color: var(--call-bg-color);
+}
+/* registration form css off  */
+
 /* Footer css on  */
 .footerMain {
 
@@ -1287,4 +1348,91 @@ h6 {
     padding: 20px 16px !important;
   }
 
+}
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+
+  0%,
+  30% {
+    background-color: var(--litter-green);
+  }
+
+  31%,
+  60% {
+    background-color: #fff;
+    /* white */
+  }
+
+  61%,
+  100% {
+    background-color: var(--call-bg-color);
+  }
+}
+
+
+
+
+
+.plate-wrap {
+
+  border: 1px dashed #9aa4c8;
+  padding: 5px 14px 5px 54px;
+}
+
+.plate-emblem {
+  position: absolute;
+  left: 10px;
+}
+
+.flag {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+}
+
+.ind {
+  letter-spacing: .6px;
+  line-height: 1;
+}
+
+.plate-input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 6px 8px;
+  color: #111827;
+
+}
+
+.plate-input::placeholder {
+  color: #9ca3af;
+  font-weight: 800;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.hint i {
+  font-style: normal;
+  border: 1px solid #cbd5e1;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 10px;
 }
