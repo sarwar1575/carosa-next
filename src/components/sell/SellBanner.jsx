@@ -67,7 +67,7 @@ function SellBanner() {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe> */}
                 <div className="createListingBtn mt-2 d-flex align-items-center justify-content-center py-3 rounded-3">
-                  <Link href="" className="text-white fSize-4 fw-medium">
+                  <Link href="/RegistrationYourCar" className="text-white fSize-4 fw-medium">
                     Create Listing
                   </Link>
                 </div>
