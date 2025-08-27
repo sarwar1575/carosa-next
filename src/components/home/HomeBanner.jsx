@@ -14,7 +14,7 @@ function HomeBanner() {
     <img
       src="/assets/img/Background.png"
       alt=""
-      className="w-100 object-fit-cover"
+      className="w-100 object-fit-cover home__bannerXp"
       height={800}
     />
 
@@ -24,7 +24,7 @@ function HomeBanner() {
         <Col xs={12}>
           <div className="bannerContents padding-Y-X mt-5">
             <p className="fSize-6 fw-bold text-white">Find cars for sale and near you</p>
-            <h1 className="fSize-over fw-semibold text-white">
+            <h1 className="fSize-over fw-semibold text-white banner__biggerText">
               4,675 Vehicles
               <br />
               Available

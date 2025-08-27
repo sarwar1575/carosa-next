@@ -45,10 +45,10 @@ function ExploreOurFullCollection() {
               speed={500}
               autoplay={true}
               breakpoints={{
-                0: { slidesPerView: 1.5 },
-                500: { slidesPerView: 2.5 },
+                 0: { slidesPerView: 1 },
+                500: { slidesPerView: 1.5 },
                 700: { slidesPerView: 2.5 },
-                1024: { slidesPerView: 5 },
+                1024: { slidesPerView: 3.5 },
                 1400: { slidesPerView: 5 },
               }}
               modules={[Navigation, Autoplay]}

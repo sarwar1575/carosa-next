@@ -28,7 +28,7 @@ function BrowseType() {
               </div>
             </Col>
             {sighting.map((items, index)=>(
-                <Col xl={2} lg={3} md={3} sm={4} key={index}>
+                <Col xl={2} lg={3} md={3} xs={6} key={index} className="mb-xl-0 mb-4">
                     <div className="sightingsParent">
                         <div className="sightingVideo position-relative">
                             <Link href="">

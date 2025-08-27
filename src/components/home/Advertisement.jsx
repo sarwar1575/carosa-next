@@ -7,7 +7,7 @@ function Advertisement() {
       <section className='Branding padding-Y-X'>
         <Container fluid>
             <Row className='justify-content-center'>
-                <Col lg={10}>
+                <Col xl={10}>
                 <div className="brandingImages">
                     <img src="/images/brandcar.png" alt="" className='w-100 object-fit-cover rounded-4' height={262}/>
                 </div>

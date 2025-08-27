@@ -72,7 +72,7 @@ function Latestfromautoverse() {
             <Col xl={7}>
               <Row>
                 {latestPic.map((items, index) => (
-                  <Col xl={6} key={index} className="mb-4">
+                  <Col xs={6} key={index} className="mb-4">
                     <div className="latestCard">
                         <div className="card border-0 p-3">
                             <img src={items.image} alt="" className="w-100 object-fit-cover rounded-2" height={180}/>

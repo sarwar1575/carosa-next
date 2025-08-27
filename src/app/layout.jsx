@@ -1,6 +1,7 @@
 // app/layout.jsx  (NO "use client" here)
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";          // global CSS for app/ routes
+import "../styles/responsive.css";
 import Header from "../components/navigation/Header"
 import Footer from "../components/navigation/Footer";
 import { Poppins } from "next/font/google";

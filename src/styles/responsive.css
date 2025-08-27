@@ -1,0 +1,66 @@
+:root {
+    --main-bg-color: #2E054E;
+    --content-text-color: #0F0F10;
+    --common-text-color: #FFFFFF;
+    --card-unique-color: #050B20;
+    --advance-text-color: #050B20;
+    --suport-color: #D8D8D8;
+    --litter-green: #8EC73E;
+    --country-bg-color: #FAFAFA;
+    --input-color: #6C757D;
+    --call-bg-color: #2A3A92;
+    --body-bg-color: #F4F7FF;
+    --rateing-bg-color: #00B67A;
+    --social-text-color: #717272;
+    --inspection-bg-color: #E3E3E3;
+    --inspactions-text-color: #555555CC;
+    --chat-bg-color: #EEEEEE;
+    --bg-danger-color: #ED1C53;
+    --waiting-bg-color: #FFDE33;
+}
+
+/* max-width */
+@media (width <=768px) {
+    .linearBox .home__bannerXp {
+        height: 600px !important;
+    }
+    .webMainTitle h1{
+        font-size: 34px !important;
+    }
+}
+
+@media (width <=992px) {
+    .padding-Y-X {
+        padding: 30px 10px !important;
+    }
+
+    .banner__biggerText {
+        font-size: 50px !important;
+    }
+}
+
+@media (width <=1400px) {
+    .mobile-drawer .accordion-item {
+        border: 0px !important;
+    }
+
+    .mobile-drawer .accordion-item button {
+        border-bottom: 1px solid var(--litter-green);
+        background-color: transparent !important;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none !important;
+    }
+
+    .mobile-drawer .accordion-body {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        margin: 10px 0px;
+    }
+}
+
+/* min-width */
+@media (width >=768px) {}
+
+/* max-width and min-width */
+@media (768px <=width <=1200px) {}

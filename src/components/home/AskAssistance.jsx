@@ -11,7 +11,7 @@ function AskAssistance() {
       <section className="askAssistanceMain padding-Y-X mt-xl-5">
         <Container fluid>
           <Row>
-            <Col xl={4}>
+            <Col xl={4} className="mb-xl-0 mb-4">
               <Row className="h-100">
                 <Col xs={12} className="pb-3">
                   <div className="d-flex justify-content-between align-items-center h-100">
@@ -102,7 +102,7 @@ function AskAssistance() {
                   </div>
                 </Col>
                 {gupshup.map((items, index) => (
-                  <Col xl={3} key={index}>
+                  <Col xl={3} sm={6} key={index} className="mb-xl-0 mb-3">
                     <div className="gupshupCardParent h-100">
                       <div className="card border-0 h-100">
                         <img

@@ -329,7 +329,7 @@ export default function Header() {
 
             {/* mobile nav as accordion */}
             <Accordion alwaysOpen>
-              <Accordion.Item eventKey="0">
+              <Accordion.Item eventKey="0" className="rounded-0">
                 <Accordion.Header>Buy used car</Accordion.Header>
                 <Accordion.Body>
                   <div className="mb-3">
@@ -363,7 +363,7 @@ export default function Header() {
                 </Accordion.Body>
               </Accordion.Item>
 
-              <Accordion.Item eventKey="1">
+              <Accordion.Item eventKey="1" className="rounded-0">
                 <Accordion.Header>Sell car</Accordion.Header>
                 <Accordion.Body>
                   <Link href="/sell" onClick={() => setMenuOpen(false)}>
@@ -372,7 +372,7 @@ export default function Header() {
                 </Accordion.Body>
               </Accordion.Item>
 
-              <Accordion.Item eventKey="2">
+              <Accordion.Item eventKey="2" className="rounded-0">
                 <Accordion.Header>New cars</Accordion.Header>
                 <Accordion.Body>
                   <Link href="/new-cars" onClick={() => setMenuOpen(false)}>
