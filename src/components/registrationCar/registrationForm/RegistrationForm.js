@@ -1,5 +1,8 @@
 "use client";
 
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -7,8 +10,8 @@ function RegistrationForm() {
   return (
     <>
       <section
-        className="registrationFormMain pb-5"
-        style={{ paddingTop: "130px" }}
+        className="registrationFormMain"
+        style={{ paddingTop: "130px", paddingBottom: "130px" }}
       >
         <Container fluid>
           <Row className="">
@@ -45,7 +48,7 @@ function RegistrationForm() {
                           className="plate-emblem d-flex align-items-center flex-column gap-1"
                           aria-hidden
                         >
-                          <svg viewBox="0 0 32 32" className="flag">
+                          {/* <svg viewBox="0 0 32 32" className="flag">
                             <defs>
                               <clipPath id="clip">
                                 <circle cx="16" cy="16" r="14" />
@@ -67,7 +70,8 @@ function RegistrationForm() {
                               />
                             </g>
                             <circle cx="16" cy="16" r="3" fill="#000080" />
-                          </svg>
+                          </svg> */}
+                          <Image src="/assets/img/indiachak.png" height="18" width="18" className="object-fit-cover"/>
                           <span className="ind fSize-1 fw-bold text-black">
                             IND
                           </span>
@@ -94,7 +98,7 @@ function RegistrationForm() {
                             type="btn"
                             class="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
                           >
-                            Next
+                            Next <FontAwesomeIcon icon={faArrowRight} className="right_nx-ic fSize-2"/>
                           </button>
                         </div>
                       </div>
