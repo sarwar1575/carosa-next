@@ -1164,9 +1164,10 @@ h6 {
 /* Dealers Page Css off  */
 
 /* registration form css on  */
-.registrationFormBody{
+.registrationFormBody {
   border-radius: 30px 0px 30px 0px;
 }
+
 .carBasicDetails h6 {
   border-radius: 50px 0px 50px 0px;
   position: relative;
@@ -1214,14 +1215,27 @@ h6 {
   transform: translateY(-50%);
   border-radius: 50%;
 }
-.me__tx .ma_entr{
+
+.me__tx .ma_entr {
   color: var(--call-bg-color);
   text-decoration: underline !important;
 }
-.priveBtn button{
+
+.priveBtn button {
   border: 1px solid var(--call-bg-color);
   color: var(--call-bg-color);
 }
+
+.inputBody .selector {
+  border: 1px dashed var(--card-unique-color) !important;
+  outline: none;
+  color: var(--input-color) !important;
+  
+}
+.form-select:focus{
+  box-shadow: none !important;
+}
+
 /* registration form css off  */
 
 /* Footer css on  */

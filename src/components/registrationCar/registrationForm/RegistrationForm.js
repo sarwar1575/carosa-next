@@ -4,9 +4,37 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
+import { useState } from "react";
 
 function RegistrationForm() {
+  const [step, setStep] = useState(1);
+  const [regNo, setRegNo] = useState("");
+  const [error, setError] = useState("");
+
+  // Optional: basic pattern (e.g., "DL 01 AB 1234" variants)
+  const regPattern = /^[A-Z]{2}\s?\d{1,2}\s?[A-Z]{1,2}\s?\d{1,4}[A-Z]{0,2}$/i;
+
+  const handleNext = () => {
+    if (!regNo.trim()) {
+      setError("Please enter a registration number.");
+      return;
+    }
+    // Pattern check (lenient)
+    if (!regPattern.test(regNo.trim())) {
+      setError(
+        "Please enter a valid registration number (e.g., DL 01 AB 1234)."
+      );
+      return;
+    }
+    setError("");
+    setStep(2);
+  };
+
+  const handleBack = () => {
+    setStep(1);
+  };
+
   return (
     <>
       <section
@@ -20,13 +48,14 @@ function RegistrationForm() {
                 <Col xs={4}>
                   <div className="carBasicDetails position-relative">
                     <h6 className="bg-white py-3 text-center fw-semibold fSize-6">
-                      Vehicle Basic Details
+                      {step === 1 ? "Vehicle Basic Details" : "Vehicle Details"}
                     </h6>
                     <div className="quadrat"></div>
                   </div>
                 </Col>
               </Row>
             </Col>
+
             <Col xs={12}>
               <Row className="justify-content-center">
                 <Col xs={5}>
@@ -36,73 +65,169 @@ function RegistrationForm() {
                         Manual Entry
                       </Link>
                     </div>
-                    <div class="d-flex justify-content-center">
-                      <p class="fSize-4 fw-semibold text-dark">
-                        Enter Registration No.
-                      </p>
-                    </div>
-                    <form className="registraionMainFillForm">
-                      <div className="plate-wrap mb-4 position-relative d-flex align-items-center bg-white rounded-2">
-                        {/* Left emblem (round flag + IND) */}
-                        <div
-                          className="plate-emblem d-flex align-items-center flex-column gap-1"
-                          aria-hidden
+
+                    {/* ---------- STEP 1: Registration Number ---------- */}
+                    {step === 1 && (
+                      <>
+                        <div className="d-flex justify-content-center">
+                          <p className="fSize-4 fw-semibold text-dark">
+                            Enter Registration No.
+                          </p>
+                        </div>
+
+                        <form
+                          className="registraionMainFillForm"
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            handleNext();
+                          }}
                         >
-                          {/* <svg viewBox="0 0 32 32" className="flag">
-                            <defs>
-                              <clipPath id="clip">
-                                <circle cx="16" cy="16" r="14" />
-                              </clipPath>
-                            </defs>
-                            <g clipPath="url(#clip)">
-                              <rect width="32" height="32" fill="#128807" />
-                              <rect
-                                y="10.6"
-                                width="32"
-                                height="10.8"
-                                fill="#ffffff"
+                          <div className="plate-wrap mb-2 position-relative d-flex align-items-center bg-white rounded-2">
+                            {/* Left emblem (round flag + IND) */}
+                            <div
+                              className="plate-emblem d-flex align-items-center flex-column gap-1"
+                              aria-hidden
+                            >
+                              <Image
+                                src="/assets/img/indiachak.png"
+                                height={18}
+                                width={18}
+                                alt="Ashoka Chakra"
+                                className="object-fit-cover"
                               />
-                              <rect
-                                y="21.4"
-                                width="32"
-                                height="10.6"
-                                fill="#ff9933"
-                              />
-                            </g>
-                            <circle cx="16" cy="16" r="3" fill="#000080" />
-                          </svg> */}
-                          <Image src="/assets/img/indiachak.png" height="18" width="18" className="object-fit-cover"/>
-                          <span className="ind fSize-1 fw-bold text-black">
-                            IND
-                          </span>
-                        </div>
+                              <span className="ind fSize-1 fw-bold text-black">
+                                IND
+                              </span>
+                            </div>
 
-                        <input
-                          type="text"
-                          className="plate-input flex-1 border-none outline-none bg-transparent"
-                          placeholder="DL 01 AB12XX"
-                          aria-label="Vehicle Registration Number"
-                        />
-                      </div>
+                            <input
+                              type="text"
+                              className="plate-input flex-1 border-none outline-none bg-transparent"
+                              placeholder="DL 01 AB 1234"
+                              aria-label="Vehicle Registration Number"
+                              value={regNo}
+                              onChange={(e) =>
+                                setRegNo(e.target.value.toUpperCase())
+                              }
+                            />
+                          </div>
 
-                      <div className="hint pb-4">
-                        <i className="">ℹ</i>
-                        <span>(auto-fill if RTO integration available)</span>
-                      </div>
-                      <div className="d-flex align-items-center justify-content-end gap-4">
-                        <div className="priveBtn">
-                          <button type="btn" className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1">Preview</button>
-                        </div>
-                        <div class="bookBtn nextBtn">
-                          <button
-                            type="btn"
-                            class="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
-                          >
-                            Next <FontAwesomeIcon icon={faArrowRight} className="right_nx-ic fSize-2"/>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
+                          {error && (
+                            <div className="pb-2">
+                              <small className="text-danger fSize-2">
+                                {error}
+                              </small>
+                            </div>
+                          )}
+
+                          <div className="hint pb-4">
+                            <i className="">ℹ</i>
+                            <span>
+                              {" "}
+                              (auto-fill if RTO integration available)
+                            </span>
+                          </div>
+
+                          <div className="d-flex align-items-center justify-content-end gap-4">
+                            <div className="priveBtn">
+                              <button
+                                type="button"
+                                className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1"
+                                onClick={() => {
+                                  // Preview on step-1 can just no-op or show toast
+                                  // Keeping as is to not change your UX
+                                }}
+                              >
+                                Preview
+                              </button>
+                            </div>
+
+                            <div className="bookBtn nextBtn">
+                              <button
+                                type="submit"
+                                className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
+                              >
+                                Next{" "}
+                                <FontAwesomeIcon
+                                  icon={faArrowRight}
+                                  className="right_nx-ic fSize-2"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </>
+                    )}
+
+                    {/* ---------- STEP 2: Example Details Form (same card) ---------- */}
+                    {step === 2 && (
+                      <>
+                        {/* <div className="d-flex justify-content-center">
+                          <p className="fSize-4 fw-semibold text-dark">
+                            Fill Vehicle Details
+                          </p>
+                        </div> */}
+
+                        <form
+                          className="registraionMainFillForm"
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            // Submit/save next steps here if needed
+                            // For now keep UX as requested (same screen)
+                          }}
+                        >
+                          <div className="inputBody mb-3">
+                            <label className="fSize-3 fw-medium mb-1">
+                              Make Year
+                            </label>
+                            <Form.Select aria-label="Default select example" className="selector py-2 px-3 rounded-1 fSize-2 w-100">
+                              <option>Select Year</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </Form.Select>
+                            {/* <input type="search" 
+                            className="w-100 d-inline-block py-2 px-3 rounded-1 fSize-2 text-dark"
+                            placeholder="Select Year"
+                            /> */}
+                            {/* <input
+                              type="text"
+                              className="form-control"
+                              value={regNo}
+                              onChange={(e) => setRegNo(e.target.value.toUpperCase())}
+                              aria-label="Vehicle Registration Number (readonly)"
+                              readOnly
+                            /> */}
+                          </div>
+                               <div className="brandsMain">
+                                <div className="">
+                                  <h6 className="fSize-8-5 fw-semibold">Brand</h6>
+                                </div>
+                               </div>
+                          <div className="d-flex align-items-center justify-content-end gap-4 mt-4">
+                            {/* Preview == Back to previous step */}
+                            <div className="priveBtn">
+                              <button
+                                type="button"
+                                className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1"
+                                onClick={handleBack}
+                              >
+                                Preview
+                              </button>
+                            </div>
+
+                            <div className="bookBtn nextBtn">
+                              <button
+                                type="submit"
+                                className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
+                              >
+                                Save & Continue
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </>
+                    )}
                   </div>
                 </Col>
               </Row>
