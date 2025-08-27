@@ -51,7 +51,7 @@ function RecentlyViewedCars() {
               className="filters-carousel"
               loop={false}
               spaceBetween={20}
-              navigation={false}
+              navigation={true}
               pagination={false}
               speed={500}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -60,7 +60,7 @@ function RecentlyViewedCars() {
                 500: { slidesPerView: 1.5 },
                 700: { slidesPerView: 2.5 },
                 1024: { slidesPerView: 3.5 },
-                1400: { slidesPerView: 5 },
+                1400: { slidesPerView: 5.5 },
               }}
               modules={[Navigation, Autoplay]}
             >

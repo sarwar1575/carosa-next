@@ -161,6 +161,27 @@ a {
   overflow: visible !important;
 } */
 
+/* swiper button  */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 30px !important;
+  height: 30px !important;
+  background-color: var(--common-text-color) !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 12px !important;
+  color: var(--card-unique-color) !important;
+}
+
+/* swiper button  */
+
 /* Navbar css on  */
 .navbar {
   position: fixed !important;
@@ -305,9 +326,11 @@ a {
   font-weight: 400;
   color: var(--input-color);
 }
-.callMeBackBtn button{
+
+.callMeBackBtn button {
   background-color: var(--call-bg-color);
 }
+
 /* Navbar css off  */
 
 /* Banner css on  */
@@ -384,7 +407,8 @@ a {
   border-radius: 0px 0px 12px 12px;
 }
 
-.vehicleDetaile p {
+.vehicleDetaile p,
+h4 {
 
   overflow: hidden;
   white-space: nowrap;
