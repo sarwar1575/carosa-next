@@ -6,11 +6,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { useState } from "react";
+import brands from "../../../data/Brands.json";
+import model from "../../../data/Model.json"
 
 function RegistrationForm() {
   const [step, setStep] = useState(1);
   const [regNo, setRegNo] = useState("");
   const [error, setError] = useState("");
+
+  // NOTE: Step 3 snippet me details.* use hua tha — isliye yahan minimal state add kar diya
+  // (agar future me Step 2 ke inputs bind karne ho to isi object me set kar dena)
+  const [details] = useState({
+    make: "",
+    model: "",
+    year: "",
+    fuel: "",
+    transmission: "",
+    km: "",
+  });
 
   // Optional: basic pattern (e.g., "DL 01 AB 1234" variants)
   const regPattern = /^[A-Z]{2}\s?\d{1,2}\s?[A-Z]{1,2}\s?\d{1,4}[A-Z]{0,2}$/i;
@@ -20,7 +33,6 @@ function RegistrationForm() {
       setError("Please enter a registration number.");
       return;
     }
-    // Pattern check (lenient)
     if (!regPattern.test(regNo.trim())) {
       setError(
         "Please enter a valid registration number (e.g., DL 01 AB 1234)."
@@ -31,8 +43,16 @@ function RegistrationForm() {
     setStep(2);
   };
 
-  const handleBack = () => {
-    setStep(1);
+  const handleBack = () => setStep(1);
+
+  // ✅ NEW: Step 3 helpers
+  const handleBackToStep2 = () => setStep(2);
+  const handleSubmitStep3 = (e) => {
+    e.preventDefault();
+    // yahan API submit ya navigation kar sakte ho
+    alert(
+      "Submitted! (Demo)\n\n" + JSON.stringify({ regNo, ...details }, null, 2)
+    );
   };
 
   return (
@@ -48,7 +68,7 @@ function RegistrationForm() {
                 <Col xs={4}>
                   <div className="carBasicDetails position-relative">
                     <h6 className="bg-white py-3 text-center fw-semibold fSize-6">
-                      {step === 1 ? "Vehicle Basic Details" : "Vehicle Details"}
+                      Vehicle Basic Details
                     </h6>
                     <div className="quadrat"></div>
                   </div>
@@ -133,10 +153,6 @@ function RegistrationForm() {
                               <button
                                 type="button"
                                 className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1"
-                                onClick={() => {
-                                  // Preview on step-1 can just no-op or show toast
-                                  // Keeping as is to not change your UX
-                                }}
                               >
                                 Preview
                               </button>
@@ -162,50 +178,66 @@ function RegistrationForm() {
                     {/* ---------- STEP 2: Example Details Form (same card) ---------- */}
                     {step === 2 && (
                       <>
-                        {/* <div className="d-flex justify-content-center">
-                          <p className="fSize-4 fw-semibold text-dark">
-                            Fill Vehicle Details
-                          </p>
-                        </div> */}
-
                         <form
                           className="registraionMainFillForm"
                           onSubmit={(e) => {
                             e.preventDefault();
-                            // Submit/save next steps here if needed
-                            // For now keep UX as requested (same screen)
+                            // ✅ JUST THIS makes Step-3 appear
+                            setStep(3);
                           }}
                         >
                           <div className="inputBody mb-3">
                             <label className="fSize-3 fw-medium mb-1">
                               Make Year
                             </label>
-                            <Form.Select aria-label="Default select example" className="selector py-2 px-3 rounded-1 fSize-2 w-100">
+                            <Form.Select
+                              aria-label="Default select example"
+                              className="selector py-2 px-3 rounded-1 fSize-2 w-100"
+                            >
                               <option>Select Year</option>
                               <option value="1">One</option>
                               <option value="2">Two</option>
                               <option value="3">Three</option>
                             </Form.Select>
-                            {/* <input type="search" 
-                            className="w-100 d-inline-block py-2 px-3 rounded-1 fSize-2 text-dark"
-                            placeholder="Select Year"
-                            /> */}
-                            {/* <input
-                              type="text"
-                              className="form-control"
-                              value={regNo}
-                              onChange={(e) => setRegNo(e.target.value.toUpperCase())}
-                              aria-label="Vehicle Registration Number (readonly)"
-                              readOnly
-                            /> */}
                           </div>
-                               <div className="brandsMain">
-                                <div className="">
-                                  <h6 className="fSize-8-5 fw-semibold">Brand</h6>
+
+                          <div className="brandsMain d-flex align-items-center justify-content-between pb-3">
+                            <div className="">
+                              <h6 className="fSize-8-5 fw-semibold">Brand</h6>
+                            </div>
+                            <div className="searchBrand position-relative">
+                              <input
+                                placeholder="Search by Brand"
+                                className="rounded-pill border-0 py-1 px-5"
+                              />
+                              <Image
+                                src="/images/Search.png"
+                                className="brandSearchIcon"
+                                width={12}
+                                height={12}
+                                alt="search"
+                              />
+                            </div>
+                          </div>
+
+                          <Row className="scollerClass">
+                            {brands.map((items, i) => (
+                              <Col
+                                xl={3}
+                                key={i}
+                                className="position-relative mb-3"
+                              >
+                                <div className="select_carbrands bg-white rounded-3 d-flex flex-column align-items-center justify-content-center">
+                                  <img src={items.image} alt="" />
+                                  <p className="fSize-3 fw-medium text-dark">
+                                    {items.brandName}
+                                  </p>
                                 </div>
-                               </div>
+                              </Col>
+                            ))}
+                          </Row>
+
                           <div className="d-flex align-items-center justify-content-end gap-4 mt-4">
-                            {/* Preview == Back to previous step */}
                             <div className="priveBtn">
                               <button
                                 type="button"
@@ -221,7 +253,77 @@ function RegistrationForm() {
                                 type="submit"
                                 className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
                               >
-                                Save & Continue
+                                Next{" "}
+                                <FontAwesomeIcon
+                                  icon={faArrowRight}
+                                  className="right_nx-ic fSize-2"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </>
+                    )}
+
+                    {/* ===================== STEP 3 (Review) ===================== */}
+                    {step === 3 && (
+                      <>
+                        <form
+                          className="registraionMainFillForm"
+                          onSubmit={handleSubmitStep3}
+                        >
+                          <div className="brandsMain d-flex align-items-center justify-content-between pb-3">
+                            <div className="">
+                              <h6 className="fSize-8-5 fw-semibold">Model</h6>
+                            </div>
+                            <div className="searchBrand position-relative">
+                              <input
+                                placeholder="Search by Model"
+                                className="rounded-pill border-0 py-1 px-5"
+                              />
+                              <Image
+                                src="/images/Search.png"
+                                className="brandSearchIcon"
+                                width={12}
+                                height={12}
+                                alt="search"
+                              />
+                            </div>
+                          </div>
+                          <Row className="scollerClass">
+                            {model.map((items, i) => (
+                              <Col
+                                xl={3}
+                                key={i}
+                                className="position-relative mb-3"
+                              >
+                                <div className="select_carmodel bg-white rounded-3 d-flex flex-column align-items-center justify-content-center p-2">
+                                  <img src={items.image} alt="" />
+                                  <p className="fSize-3 fw-medium text-dark pt-3">
+                                    {items.brandName}
+                                  </p>
+                                </div>
+                              </Col>
+                            ))}
+                          </Row>
+                          <div className="d-flex align-items-center justify-content-end gap-4">
+                            {/* Preview == Back to Step 2 */}
+                            <div className="priveBtn">
+                              <button
+                                type="button"
+                                className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1"
+                                onClick={handleBackToStep2}
+                              >
+                                Preview
+                              </button>
+                            </div>
+
+                            <div className="bookBtn nextBtn">
+                              <button
+                                type="submit"
+                                className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
+                              >
+                                Submit
                               </button>
                             </div>
                           </div>

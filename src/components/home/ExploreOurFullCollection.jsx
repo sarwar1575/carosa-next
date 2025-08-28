@@ -24,7 +24,7 @@ function ExploreOurFullCollection() {
                   <h1 className="fSize-11 fw-bold">Explore Our Full Collection</h1>
                 </div>
                 <div className="viewAll">
-                  <Link href="" className="fSize-3 fw-medium viewBtn">
+                  <Link href="/recentCar" className="fSize-3 fw-medium viewBtn">
                     View All{" "}
                     <img
                       src="/images/arrowRight.png"

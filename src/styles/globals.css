@@ -528,6 +528,22 @@ h4 {
 
 }
 
+.select_carbrands {
+  border: 1px solid #E9E9E9;
+}
+
+.select_carmodel {
+  border: 1px solid #E6E6E6;
+  background-color: var(--inspection-bg-color) !important;
+
+}
+
+.select_carmodel img {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+}
+
 .cardBrands img {
 
   width: 100px;
@@ -1230,12 +1246,40 @@ h6 {
   border: 1px dashed var(--card-unique-color) !important;
   outline: none;
   color: var(--input-color) !important;
-  
+
 }
-.form-select:focus{
+
+.form-select:focus {
   box-shadow: none !important;
 }
 
+.searchBrand input {
+  outline: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.searchBrand input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--input-color);
+}
+
+.brandSearchIcon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.scollerClass{
+    height: 270px;
+  /* Set your desired height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  scrollbar-width: none;
+  /* Firefox - hide scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge - hide scrollbar */
+}
 /* registration form css off  */
 
 /* Footer css on  */
