@@ -438,6 +438,7 @@ export default function MakeBestOffer() {
                           <div className="d-flex gap-1 align-items-center justify-content-end">
                             {/* <img src=" alt="" /> */}
                             <Image
+                            alt=""
                               src="/images/price.png"
                               width={21}
                               height={21}
@@ -516,6 +517,7 @@ export default function MakeBestOffer() {
                               src="/images/price.png"
                               width={21}
                               height={21}
+                              alt=""
                             />
                             <div className="roadPrice">
                               <h6 className="m-0 fsSize-7-5 fw-semibold">

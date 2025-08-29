@@ -24,7 +24,7 @@ function Footer() {
               <h2 className="mb-0 pb-2 text-white fSize-7 fw-semibold text-uppercase">Company</h2>
               <ul className="p-0 m-0 footerLinksParents">
                 <li className="list-items pb-2">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">about us</Link>
+                  <Link href="/about-us" className="link-item text-uppercase fw-normal fSize-3">about us</Link>
                 </li>
                 {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Careers</Link>
@@ -33,7 +33,7 @@ function Footer() {
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Press kit</Link>
                 </li> */}
                   <li className="list-items pb-2">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">Blog</Link>
+                  <Link href="/blog" className="link-item text-uppercase fw-normal fSize-3">Blog</Link>
                 </li>
                   {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Article</Link>
@@ -42,13 +42,13 @@ function Footer() {
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">News</Link>
                 </li> */}
                   <li className="list-items pb-2">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">Privacy Policy</Link>
+                  <Link href="/privacy-policy" className="link-item text-uppercase fw-normal fSize-3">Privacy Policy</Link>
                 </li>
                   {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Sustainability</Link>
                 </li> */}
                   <li className="list-items pb-4">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">Testimonials</Link>
+                  <Link href="/testimonials" className="link-item text-uppercase fw-normal fSize-3">Testimonials</Link>
                 </li>
               </ul>
               </div>
@@ -89,13 +89,13 @@ function Footer() {
               <h2 className="mb-0 pb-2 text-white fSize-7 fw-semibold text-uppercase">Help & support</h2>
               <ul className="p-0 m-0 footerLinksParents">
                 <li className="list-items pb-2">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">FAQs</Link>
+                  <Link href="/faq" className="link-item text-uppercase fw-normal fSize-3">FAQs</Link>
                 </li>
                 <li className="list-items pb-2">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">Security</Link>
+                  <Link href="/security" className="link-item text-uppercase fw-normal fSize-3">Security</Link>
                 </li>
                 <li className="list-items pb-2">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">Contact us</Link>
+                  <Link href="/contact-us" className="link-item text-uppercase fw-normal fSize-3">Contact us</Link>
                 </li>
                   {/* <li className="list-items pb-2">
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">Become a partner</Link>
@@ -104,7 +104,7 @@ function Footer() {
                   <Link href="" className="link-item text-uppercase fw-normal fSize-3">RC transfer status</Link>
                 </li> */}
                   <li className="list-items pb-4">
-                  <Link href="" className="link-item text-uppercase fw-normal fSize-3">Terms & conditions</Link>
+                  <Link href="/terms-conditions" className="link-item text-uppercase fw-normal fSize-3">Terms & conditions</Link>
                 </li>
               </ul>
               </div>

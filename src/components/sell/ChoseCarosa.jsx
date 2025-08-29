@@ -2,6 +2,7 @@
 
 import { Col, Container, Row } from "react-bootstrap";
 import choseCarosa from "@/data/WhyChoseCarosa.json";
+import Image from "next/image";
 
 function ChoseCarosa() {
   return (
