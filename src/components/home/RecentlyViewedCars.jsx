@@ -81,7 +81,7 @@ function RecentlyViewedCars() {
                           />
                           {items.platform && (
                             <div className="carosaBisk">
-                              <p className="text-white m-0 py-1 px-4 fSize-2 fw-normal text-center">
+                              <p className="text-dark m-0 py-1 px-4 fSize-2 fw-medium text-center">
                                 {items.platform}
                               </p>
                             </div>
@@ -96,13 +96,13 @@ function RecentlyViewedCars() {
 
                         <div className="card-body">
                           <div className="vehicleDetaile border-bottom">
-                            <h4 className="text-white fSize-4 fw-semibold">
+                            <h4 className="fSize-4 fw-semibold">
                               {items.brand}
                             </h4>
-                            <p className="text-white fSize-3 fw-normal">
+                            <p className="fSize-3 fw-normal">
                               {items.modal}
                             </p>
-                            <p className="text-white fSize-3 fw-normal">
+                            <p className="fSize-3 fw-normal">
                               <FontAwesomeIcon
                                 icon={faLocationDot}
                                 // FontAwesome React accepts size keywords; for pixel control, use style
@@ -114,43 +114,53 @@ function RecentlyViewedCars() {
 
                           <div className="vehicleCapibility mt-3 d-flex justify-content-between align-items-center px-4 border-bottom">
                             <div className="miles d-flex align-items-center flex-column gap-2">
-                              <img src="/images/miles.png" alt="" width={16} />
-                              <p className="text-white fSize-3 fw-normal">
+                              <img src="/images/Icon.png" alt="" width={16} />
+                              <p className="fSize-3 fw-normal">
                                 {items.use} Miles
                               </p>
                             </div>
                             <div className="pump d-flex align-items-center flex-column gap-2">
-                              <img src="/images/pump.png" alt="" width={16} />
-                              <p className="text-white fSize-3 fw-normal">
+                              <img src="/images/pumpsec.png" alt="" width={16} />
+                              <p className="fSize-3 fw-normal">
                                 {items.vehicle}
                               </p>
                             </div>
                             <div className="auto d-flex align-items-center flex-column gap-2">
                               <img
-                                src="/images/automation.png"
+                                src="/images/auto__matic.png"
                                 alt=""
                                 width={16}
                               />
-                              <p className="text-white fSize-3 fw-normal">
-                                {items.vehicle}
+                              <p className="fSize-3 fw-normal">
+                                {items.fModal}
+                              </p>
+                            </div>
+                              <div className="auto d-flex align-items-center flex-column gap-2">
+                              <img
+                                src="/images/own.png"
+                                alt=""
+                                width={16}
+                              />
+                              <p className="fSize-3 fw-normal">
+                                {items.own}<span>st</span>
                               </p>
                             </div>
                           </div>
 
                           <div className="pricingDetailes d-flex align-items-center justify-content-between mt-3">
                             <div>
-                              <h4 className="m-0 text-white fSize-5 fw-bold">
+                              <h4 className="m-0 fSize-5 fw-bold">
                                 {items.price}
                               </h4>
                               <span
                                 className="fSize-2 fw-normal"
-                                style={{ color: "#E6E6E6" }}
+                                // style={{ color: "#E6E6E6" }}
                               >
                                 + {items.charges}
                               </span>
                             </div>
                             <div>
-                              <p className="text-white fSize-2 fw-semibold m-0">
+                              <p className="fSize-2 fw-semibold m-0">
                                 EMI{" "}
                                 <FontAwesomeIcon
                                   icon={faIndianRupeeSign}

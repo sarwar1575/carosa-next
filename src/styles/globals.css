@@ -395,7 +395,7 @@ a {
 }
 
 .cardMain .card .card-body {
-  background-color: var(--card-unique-color);
+  background-color: var(--common-text-color);
 }
 
 .cardMain .card img {
@@ -406,6 +406,8 @@ a {
 .cardMain .card .card-body {
 
   border-radius: 0px 0px 12px 12px;
+  border: 1px solid var(--call-bg-color) !important;
+  border-top: 0px !important;
 }
 
 .vehicleDetaile p,
@@ -414,8 +416,14 @@ h4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: var(--content-text-color) !important;
 }
-
+.vehicleCapibility p, h4{
+  color: var(--content-text-color) !important;
+}
+.pricingDetailes p, h4{
+  color: var(--content-text-color) !important;
+}
 .filters-carousel {
   width: 100% !important;
 }
@@ -437,7 +445,7 @@ h4 {
 
 .carosaBisk {
   /* background-color: var(--card-unique-color); */
-  background-image: url(../../public/images/carCard.png);
+  background-image: url(../../public/images/Vector.png);
   width: 177px;
   background-size: cover;
   /* pura div cover karega */
@@ -446,7 +454,8 @@ h4 {
   background-repeat: no-repea;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Recent view car css off  */
@@ -1388,6 +1397,9 @@ h6 {
 }
  .rangAmmo span{
   color: var(--call-bg-color);
+ }
+ .max__min span{
+  color: #B0B0B0;
  }
 /* filters css off  */
 

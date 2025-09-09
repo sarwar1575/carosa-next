@@ -9,7 +9,7 @@ function CarFilters() {
   return (
     <>
       <div className="carFilterMain bg-white py-3 px-2">
-        <div className="budget-card">
+        <div className="budget-card border-bottom pb-2 mb-3">
           <h6 className="fSize-4 fw-medium text-black">Your Budget</h6>
 
           <div className="rangAmmo d-flex justify-content-between mt-2">
@@ -40,10 +40,14 @@ function CarFilters() {
             />
           </div>
 
-          <div className="d-flex justify-content-between text-muted mt-1 small">
-            <span>Minimum</span>
-            <span>Maximum</span>
+          <div className="max__min d-flex justify-content-between text-muted mt-1 small">
+            <span className="fSize-1 fw-normal">Minimum</span>
+            <span className="fSize-1 fw-normal">Maximum</span>
           </div>
+        </div>
+        <div className="makeModel">
+          <h6 className="fSize-4 fw-medium text-black">Make & Model</h6>
+
         </div>
       </div>
     </>
