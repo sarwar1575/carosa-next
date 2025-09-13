@@ -1,46 +1,122 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 
-function WarrantyForm({goStep7,backTo5}) {
+function WarrantyForm({ goStep7, backTo5 }) {
+  const [selectedSpareKey, setSelectedSpareKey] = useState(null);
+  const [selectedTransmission, setSelectedTransmission] = useState(null);
+  const [warrantyDate, setWarrantyDate] = useState("");
   return (
     <>
-      <form
-        className="registraionMainFillForm"
-       onSubmit={goStep7}
-      >
-        <div className="mb-3">
+      <form className="registraionMainFillForm" onSubmit={goStep7}>
+        <div className="owner__list pb-0 mb-4 text-center">
           <label className="fSize-4 fw-semibold text-black pb-2">
-            City / Location
+            Warranty
           </label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="e.g., Delhi"
-          />
+          <div className="d-flex align-items-center justify-content-center gap-3">
+            {["Yes", "No"].map((option) => (
+              <div
+                key={option}
+                className={`owners rounded-circle border d-flex justify-content-center align-items-center flex-column ${
+                  selectedSpareKey === option ? "activeSelect" : ""
+                }`}
+                onClick={() => setSelectedSpareKey(option)}
+                style={{ cursor: "pointer" }}
+              >
+                <span className="fSize-1 fw-semibold">{option}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="mb-3">
+        <div className="owner__list pb-0 mb-4">
+          <Row>
+            <Col lg={6}>
+              <div className="carType">
+                <label className="fSize-4 fw-semibold text-black pb-2">
+                  Warranty Type
+                </label>
+                <div
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                    selectedTransmission === "Manual" ? "activeSelect" : ""
+                  }`}
+                  onClick={() => setSelectedTransmission("Manual")}
+                  style={{ cursor: "pointer" }}
+                >
+                  Manual
+                </div>
+              </div>
+            </Col>
+
+            <Col lg={6}>
+              <div className="carType">
+                <label className="fSize-4 fw-semibold text-black pb-2">
+                  Warranty Expiry Date
+                </label>
+                <input
+                  type="date"
+                  className="button__selects w-100 px-3 fSize-2 fw-semibold py-2"
+                  value={warrantyDate}
+                  onChange={(e) => setWarrantyDate(e.target.value)}
+                />
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <div className="owner__list pb-0 mb-4 text-center">
           <label className="fSize-4 fw-semibold text-black pb-2">
-            Asking Price (₹)
+            Warranty
           </label>
-          <input
-            type="number"
-            min={0}
-            className="form-control"
-            placeholder="e.g., 525000"
-          />
+          <div className="d-flex align-items-center justify-content-center gap-3">
+            {["Yes", "No"].map((option) => (
+              <div
+                key={option}
+                className={`owners rounded-circle border d-flex justify-content-center align-items-center flex-column ${
+                  selectedSpareKey === option ? "activeSelect" : ""
+                }`}
+                onClick={() => setSelectedSpareKey(option)}
+                style={{ cursor: "pointer" }}
+              >
+                <span className="fSize-1 fw-semibold">{option}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="mb-3">
-          <label className="fSize-4 fw-semibold text-black pb-2">
-            Additional Notes (Optional)
-          </label>
-          <textarea
-            rows={3}
-            className="form-control"
-            placeholder="Add any highlights, accessories, recent work, etc."
-          />
+        <div className="owner__list pb-3 mb-4">
+          <Row>
+            <Col lg={6}>
+              <div className="carType">
+                <label className="fSize-4 fw-semibold text-black pb-2">
+                  Warranty Type
+                </label>
+                <div
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                    selectedTransmission === "Manual" ? "activeSelect" : ""
+                  }`}
+                  onClick={() => setSelectedTransmission("Manual")}
+                  style={{ cursor: "pointer" }}
+                >
+                  Manual
+                </div>
+              </div>
+            </Col>
+
+            <Col lg={6}>
+              <div className="carType">
+                <label className="fSize-4 fw-semibold text-black pb-2">
+                  Warranty Expiry Date
+                </label>
+                <input
+                  type="date"
+                  className="button__selects w-100 px-3 fSize-2 fw-semibold py-2"
+                  value={warrantyDate}
+                  onChange={(e) => setWarrantyDate(e.target.value)}
+                />
+              </div>
+            </Col>
+          </Row>
         </div>
-    <div className="d-flex align-items-center justify-content-end gap-4">
+        <div className="d-flex align-items-center justify-content-end gap-4">
           <div className="priveBtn">
             <button
               type="button"

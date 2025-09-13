@@ -418,12 +418,17 @@ h4 {
   text-overflow: ellipsis;
   color: var(--content-text-color) !important;
 }
-.vehicleCapibility p, h4{
+
+.vehicleCapibility p,
+h4 {
   color: var(--content-text-color) !important;
 }
-.pricingDetailes p, h4{
+
+.pricingDetailes p,
+h4 {
   color: var(--content-text-color) !important;
 }
+
 .filters-carousel {
   width: 100% !important;
 }
@@ -445,8 +450,8 @@ h4 {
 
 .carosaBisk {
   /* background-color: var(--card-unique-color); */
-  background-image: url(../../public/images/Vector.png);
-  width: 177px;
+  background-image: url(../../public/images/radiusImage.png);
+  width: 100%;
   background-size: cover;
   /* pura div cover karega */
   background-position: center;
@@ -456,6 +461,7 @@ h4 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+
 }
 
 /* Recent view car css off  */
@@ -1242,16 +1248,18 @@ h6 {
   transform: translateY(-50%);
   border-radius: 50%;
 }
-.check{
+
+.check {
   width: 20px;
   height: 20px;
-    position: absolute;
+  position: absolute;
   top: 50%;
   left: 28px;
   transform: translateY(-50%);
   border-radius: 50%;
   background-color: var(--common-text-color);
 }
+
 .me__tx .ma_entr {
   color: var(--call-bg-color);
   text-decoration: underline !important;
@@ -1348,7 +1356,7 @@ h6 {
 }
 
 .hint {
- color: var(--input-color);
+  color: var(--input-color);
 }
 
 .hint i {
@@ -1359,6 +1367,14 @@ h6 {
 /* registration form css off  */
 
 /* filters css on  */
+.card__listing {
+  cursor: pointer;
+}
+
+.carFilterMain {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+}
 
 .range-container {
   height: 30px;
@@ -1395,28 +1411,124 @@ h6 {
   border-radius: 50%;
   cursor: pointer;
 }
- .rangAmmo span{
+
+.rangAmmo span {
   color: var(--call-bg-color);
- }
- .max__min span{
+}
+
+.max__min span {
   color: #B0B0B0;
- }
+}
+
+.inputfilter input {
+  border: 1px solid var(--owner-bg-color) !important;
+  outline: none;
+}
+
+.inputfilter input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #717272;
+}
+
+.allBrand h6 {
+  color: #B0B0B0;
+}
+
+.checkBox .custom-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: var(--country-bg-color) !important;
+  border: 1px solid var(--owner-bg-color) !important;
+}
+
+.angleDown {
+  color: var(--card-unique-color);
+}
+
+.numberOfCar {
+  color: var(--social-text-color);
+}
+
+.modalsCardDown .listModal {
+  width: 34px;
+  height: 34px;
+  background-color: var(--body-bg-color);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.CarTabSelect {
+
+  background-color: #E5F3FF;
+}
+
+.tt {
+  max-height: 214px;
+  padding-right: 6px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* Chrome, Edge, Safari */
+.tt::-webkit-scrollbar {
+  width: 2px;
+  /* Patla kar diya */
+}
+
+.tt::-webkit-scrollbar-thumb {
+  background-color: var(--call-bg-color);
+  /* Line ka color */
+  border-radius: 10px;
+  /* Thoda round */
+}
+
+.tt::-webkit-scrollbar-track {
+  background: transparent;
+  /* Background transparent rakha */
+}
+
+
 /* filters css off  */
 
 /* Ownerships css on  */
-.owners{
+.owners {
   width: 50px;
   height: 50px;
   border: 1px solid var(--owner-bg-color);
   background-color: #BABABA4D;
 }
-.carType button{
+
+.carType .button__selects {
   border: 1px solid var(--owner-bg-color);
   background-color: #BABABA4D;
   border-radius: 50px 0px 50px 0px;
   color: var(--social-text-color);
+  outline: none;
 }
+
+.activeSelect {
+  background-color: #d0b3e3 !important;
+  color: #6300A3 !important;
+  border-color: #6300a3 !important;
+}
+
 /* Ownerships css on  */
+
+/* upload image css on  */
+.choseFile__body {
+  border: 1px dashed #D0D5DD;
+  outline: none;
+}
+
+.mainBody__uploadfile p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* upload image css on  */
 
 
 /* Footer css on  */

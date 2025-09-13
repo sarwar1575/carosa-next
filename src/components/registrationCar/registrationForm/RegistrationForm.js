@@ -178,7 +178,7 @@ export default function RegistrationForm() {
         <Row>
           <Col xs={12} className="mb-4">
             <Row className="justify-content-center">
-              <Col xs={12} md={8} lg={6}>
+              <Col xs={12} md={8} lg={4}>
                 <div className="carBasicDetails position-relative">
                   <h6 className="bg-white py-3 text-center fw-semibold fSize-6">
                     Vehicle Basic Details

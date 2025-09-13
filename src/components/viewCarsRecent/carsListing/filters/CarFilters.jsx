@@ -1,15 +1,16 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
-
-
+import ModalCarDetails from "./ModalCarDetails";
+import BrandsCarsList from "./BrandsCarsList";
 
 function CarFilters() {
   const [minValue, setMinValue] = useState(100000);
   const [maxValue, setMaxValue] = useState(3000000);
   return (
     <>
-      <div className="carFilterMain bg-white py-3 px-2">
-        <div className="budget-card border-bottom pb-2 mb-3">
+      <div className="carFilterMain bg-white py-3 px-3">
+        <div className="budget-card border-bottom pb-2 mb-4">
           <h6 className="fSize-4 fw-medium text-black">Your Budget</h6>
 
           <div className="rangAmmo d-flex justify-content-between mt-2">
@@ -44,11 +45,9 @@ function CarFilters() {
             <span className="fSize-1 fw-normal">Minimum</span>
             <span className="fSize-1 fw-normal">Maximum</span>
           </div>
-        </div>
-        <div className="makeModel">
-          <h6 className="fSize-4 fw-medium text-black">Make & Model</h6>
-
-        </div>
+        </div>   
+          <BrandsCarsList />    
+          <ModalCarDetails />
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import { faArrowRight, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import CarPhotosForm from "./uploader/CarPhotosForm";
 
 function MediaUploads({backTo6,goStep8}) {
   return (
@@ -9,20 +10,7 @@ function MediaUploads({backTo6,goStep8}) {
         className="registraionMainFillForm"
         onSubmit={goStep8}
       >
-        <div className="mb-3">
-          <label className="fSize-4 fw-semibold text-black pb-2">
-            Upload Photos
-          </label>
-          <div className="p-4 border rounded-2 text-center">
-            <FontAwesomeIcon icon={faUpload} />
-            <p className="mt-2 mb-1">Drag & drop or click to select</p>
-            <small className="text-muted">
-              Front, back, sides, dashboard, odometer, docs (Max 10)
-            </small>
-            <input type="file" multiple className="form-control mt-3" />
-          </div>
-        </div>
-
+        <CarPhotosForm />
          <div className="d-flex align-items-center justify-content-end gap-4">
                <div className="priveBtn">
                  <button
