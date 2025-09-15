@@ -12,9 +12,12 @@ import "swiper/css/navigation";
 import Link from "next/link";
 import { Row, Col } from "react-bootstrap";
 import recentcarsData from "../../data/RecentlyViewedCars.json";
+import SelectedCarFilter from "../viewCarsRecent/carsListing/filters/SelectedCarFilter";
 
 function CarItem({ items, href }) {
   return (
+    <>
+    
     <div className="cardMain">
       <div className="card border-0 position-relative">
         <Link href={href} className="position-relative">
@@ -87,6 +90,7 @@ function CarItem({ items, href }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
@@ -140,6 +144,8 @@ function CarsCard({
   }
 
   return (
+    <>
+    <SelectedCarFilter />
     <Row className="g-3">
       {limited.map((items, index) => {
         const slug = slugify(`${items.brand}-${items.modal}`);
@@ -151,6 +157,7 @@ function CarsCard({
         );
       })}
     </Row>
+    </>
   );
 }
 

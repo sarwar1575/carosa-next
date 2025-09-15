@@ -1530,11 +1530,23 @@ h6 {
 
 /* upload image css on  */
 
+/* Listing cars selected filter css on */
+.cancleClick{
+  color: var(--social-text-color);
+}
+.chips span{
+  color: var(--social-text-color);
+}
+.clearBtn{
+  color: #B70F12;
+}
+/* Listing cars selected filter css off */
+
 
 /* Footer css on  */
 .footerMain {
 
-  background-color: var(--main-bg-color);
+  background-color: var(--call-bg-color);
   /* background: linear-gradient(0deg, rgba(142, 199, 62, 0.71) 0%, rgba(42, 58, 146, 0.9) 69%); */
 }
 

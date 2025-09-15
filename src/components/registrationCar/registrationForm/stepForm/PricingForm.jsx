@@ -5,6 +5,7 @@ import { Col, Row } from "react-bootstrap";
 
 function PricingForm({ backTo8 }) {
   const [manual, setManual] = useState(null);
+  const [manualsce, setManualsec]=useState(null)
   return (
     <form className="registraionMainFillForm">
       <div className="owner__list pb-0 mb-4">
@@ -32,9 +33,9 @@ function PricingForm({ backTo8 }) {
         </p>
               <div
                 className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
-                  manual === "CruiseControl" ? "activeSelect" : ""
+                  manualsce === "CruiseControl" ? "activeSelect" : ""
                 }`}
-                onClick={() => setManual("CruiseControl")}
+                onClick={() => setManualsec("CruiseControl")}
                 style={{ cursor: "pointer" }}
               >
                Enter Manual

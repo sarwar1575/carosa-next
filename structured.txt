@@ -1,0 +1,92 @@
+
+##Home folder components--
+/src/components/home/Advertisement.jsx ------------------------------------
+/src/components/home/AskAssistance.jsx ------------------------------------
+/src/components/home/BrowseType.jsx ------------------------------------
+/src/components/home/CarsCard.jsx ------------------------------------
+/src/components/home/ExploreOurFullCollection.jsx ------------------------------------
+/src/components/home/Home.jsx ------------------------------------
+/src/components/home/HomeBanner.jsx ------------------------------------
+/src/components/home/Latestfromautoverse.jsx ------------------------------------
+/src/components/home/LookingForCar.jsx ------------------------------------
+/src/components/home/OurMission.jsx ------------------------------------
+/src/components/home/RecentlyViewedCars.jsx ------------------------------------
+/src/components/home/Stories.jsx ------------------------------------
+/src/components/home/YourFavoriteBrand.jsx ------------------------------------
+
+
+##common folder components--
+/src/components/common/CallUsForm.js ------------------------------------
+
+
+## Dealers folder components--
+/src/components/dealers/DealersBanner.jsx ------------------------------------
+/src/components/dealers/DealersPage.jsx ------------------------------------
+
+
+##Layout folder components--
+/src/components/layout/HomeLayout.jsx ------------------------------------
+/src/components/layout/MainLayout.jsx ------------------------------------
+
+
+##Navigation folder components--
+/src/components/navigation/Footer.jsx ------------------------------------
+/src/components/navigation/Header.jsx ------------------------------------
+
+
+##RegistrationCar folder components--
+/src/components/registrationCar/registrationForm/RegistrationForm.js ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/AdditionalFeatures.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/BrandForm.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/EnterRegistration.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/OwnershipForm.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/PricingForm.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/VeriantForm.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/WarrantyForm.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/uploader/CarPhotosForm.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/stepForm/uploader/SectionUploader.jsx ------------------------------------
+/src/components/registrationCar/registrationForm/view/RegistrationViewClient.jsx ------------------------------------
+
+
+##Sell folder components--
+/src/components/sell/BharosaOfCarosa.jsx ------------------------------------
+/src/components/sell/CarosaWork.jsx ------------------------------------
+/src/components/sell/ChoseCarosa.jsx ------------------------------------
+/src/components/sell/SellBanner.jsx ------------------------------------
+/src/components/sell/SellCarsPages.jsx ------------------------------------
+
+
+##Viewcars folder components--
+/src/components/viewCarsRecent/CarListCard.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/CarListing.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/filters/BrandsCarsList.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/filters/CarCollectionTab.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/filters/CarFilters.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/filters/CarMobileFilters.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/filters/ModalCarDetails.jsx ------------------------------------
+/src/components/viewCarsRecent/carsListing/filters/SelectedCarFilter.jsx ------------------------------------
+
+##View--
+/src/components/viewCarsRecent/view/CarViewClient.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/RecentCarDetails.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/comps/AccordionList.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/comps/Banner.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/comps/CarosaKaBharosa.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/comps/EMICalculator.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/comps/MoreExplore.jsx ------------------------------------
+/src/components/viewCarsRecent/view/details/makeBestOffer/MakeBestOffer.jsx ------------------------------------
+
+
+##Store folder components--
+/src/components/store/selectedCar.js ------------------------------------
+
+#App folder components
+/src/app/page.jsx ------------------------------------
+/src/app/dealers/layout.jsx ------------------------------------
+/src/app/dealers/page.jsx ------------------------------------
+/src/app/make-offer/page.jsx ------------------------------------
+/src/app/recentCar/page.jsx ------------------------------------
+/src/app/recentCar/[...carSlug]/page.jsx ------------------------------------
+/src/app/recentCar/[filter]/page.jsx ------------------------------------
+/src/app/RegistrationYourCar/page.jsx ------------------------------------
+/src/app/sell/page.jsx ------------------------------------
