@@ -42,6 +42,9 @@ export default function Header() {
     };
   }, []);
 
+
+  
+
   return (
     <header className="site-header bg-white">
       <section className="navbar px-3 px-lg-3 py-0">
