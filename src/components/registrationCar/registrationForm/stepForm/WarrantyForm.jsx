@@ -37,7 +37,7 @@ function WarrantyForm({ goStep7, backTo5 }) {
                   Warranty Type
                 </label>
                 <div
-                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                     selectedTransmission === "Manual" ? "activeSelect" : ""
                   }`}
                   onClick={() => setSelectedTransmission("Manual")}
@@ -55,7 +55,7 @@ function WarrantyForm({ goStep7, backTo5 }) {
                 </label>
                 <input
                   type="date"
-                  className="button__selects w-100 px-3 fSize-2 fw-semibold py-2"
+                  className="button__selects w-100 px-3 fSize-2 fw-semibold py-3"
                   value={warrantyDate}
                   onChange={(e) => setWarrantyDate(e.target.value)}
                 />
@@ -90,7 +90,7 @@ function WarrantyForm({ goStep7, backTo5 }) {
                   Warranty Type
                 </label>
                 <div
-                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                     selectedTransmission === "Manual" ? "activeSelect" : ""
                   }`}
                   onClick={() => setSelectedTransmission("Manual")}
@@ -108,7 +108,7 @@ function WarrantyForm({ goStep7, backTo5 }) {
                 </label>
                 <input
                   type="date"
-                  className="button__selects w-100 px-3 fSize-2 fw-semibold py-2"
+                  className="button__selects w-100 px-3 fSize-2 fw-semibold py-3"
                   value={warrantyDate}
                   onChange={(e) => setWarrantyDate(e.target.value)}
                 />

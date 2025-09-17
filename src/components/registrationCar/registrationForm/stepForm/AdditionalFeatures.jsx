@@ -23,6 +23,7 @@ function AdditionalFeatures({ backTo7, goStep9 }) {
                   onClick={() => setSunroof("Sunroof")}
                   style={{ cursor: "pointer" }}
                 >
+                  <input type="checkbox" className=""/>
                   Sunroof
                 </div>
               </div>

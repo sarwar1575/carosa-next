@@ -41,7 +41,7 @@ function OwnershipForm({ backTo4, goStep6 }) {
             <Col lg={6}>
               <div className="carType">
                 <div
-                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                     selectedTransmission === "Manual" ? "activeSelect" : ""
                   }`}
                   onClick={() => setSelectedTransmission("Manual")}
@@ -54,7 +54,7 @@ function OwnershipForm({ backTo4, goStep6 }) {
             <Col lg={6}>
               <div className="carType">
                 <div
-                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                     selectedTransmission === "Automatic" ? "activeSelect" : ""
                   }`}
                   onClick={() => setSelectedTransmission("Automatic")}
@@ -76,7 +76,7 @@ function OwnershipForm({ backTo4, goStep6 }) {
               <div className="col" key={fuel}>
                 <div className="carType">
                   <div
-                    className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                    className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                       selectedFuel === fuel ? "activeSelect" : ""
                     }`}
                     onClick={() => setSelectedFuel(fuel)}
@@ -98,7 +98,7 @@ function OwnershipForm({ backTo4, goStep6 }) {
             <Col lg={6}>
               <div className="carType">
                 <div
-                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-2 ${
+                  className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                     selectedKm === "manual" ? "activeSelect" : ""
                   }`}
                   onClick={() => setSelectedKm("manual")}

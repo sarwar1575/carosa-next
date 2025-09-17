@@ -21,25 +21,50 @@ function BrandForm({
   return (
     <>
       <form className="registraionMainFillForm" onSubmit={goStep3}>
-        <div className="inputBody mb-3">
-          {" "}
-          <label className="fSize-3 fw-medium mb-1">Make Year</label>{" "}
-          <Form.Select
-            aria-label="Select Year"
-            className="selector py-2 px-3 rounded-1 fSize-2 w-100"
-            value={details.year}
-            onChange={handleYearChange}
-          >
-            {" "}
-            <option value="">Select Year</option>{" "}
-            {years.map((y) => (
-              <option key={y} value={y}>
+        <Row>
+          <Col xs={6}>
+            <div className="inputBody mb-3">
+              {" "}
+              <label className="fSize-3 fw-medium mb-1">Reg. Year</label>{" "}
+              <Form.Select
+                aria-label="Select Year"
+                className="selector py-2 px-3 rounded-1 fSize-2 w-100"
+                value={details.year}
+                onChange={handleYearChange}
+              >
                 {" "}
-                {y}{" "}
-              </option>
-            ))}{" "}
-          </Form.Select>{" "}
-        </div>
+                <option value="">Select Year</option>{" "}
+                {years.map((y) => (
+                  <option key={y} value={y}>
+                    {" "}
+                    {y}{" "}
+                  </option>
+                ))}{" "}
+              </Form.Select>{" "}
+            </div>
+          </Col>
+          <Col xs={6}>
+            <div className="inputBody mb-3">
+              {" "}
+              <label className="fSize-3 fw-medium mb-1">Mfg. Year</label>{" "}
+              <Form.Select
+                aria-label="Select Year"
+                className="selector py-2 px-3 rounded-1 fSize-2 w-100"
+                value={details.year}
+                onChange={handleYearChange}
+              >
+                {" "}
+                <option value="">Select Year</option>{" "}
+                {years.map((y) => (
+                  <option key={y} value={y}>
+                    {" "}
+                    {y}{" "}
+                  </option>
+                ))}{" "}
+              </Form.Select>{" "}
+            </div>
+          </Col>
+        </Row>
 
         {/* Brand */}
         <div className="brandsMain d-flex align-items-center justify-content-between pb-3">

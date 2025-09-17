@@ -19,6 +19,20 @@ import PricingForm from "./stepForm/PricingForm";
 import brands from "../../../data/Brands.json";
 import model from "../../../data/Model.json";
 import variant from "../../../data/Variant.json";
+import FormHeadingComponents from "./FormHeadingComponents";
+
+// ✅ Array banana hoga
+const stepHeadings = [
+  "Vehicle Basic Details",
+  "Vehicle Basic Details",
+  "Vehicle Basic Details",
+  "Vehicle Basic Details",
+  "Ownership & Specifications",
+  "Warranty & Insurance",
+  "Media Uploads",
+  "Additional Features",
+  "Pricing",
+];
 
 export default function RegistrationForm() {
   const [step, setStep] = useState(1);
@@ -79,7 +93,7 @@ export default function RegistrationForm() {
   const goStep3 = (e) => { e?.preventDefault?.(); setStep(3); };
   const goStep4 = (e) => { e?.preventDefault?.(); setStep(4); };
   const goStep5 = (e) => { e?.preventDefault?.(); setStep(5); };
-  const goStep6 = (e) => { e?.preventDefault?.(); setStep(6); }; // ✅ fix
+  const goStep6 = (e) => { e?.preventDefault?.(); setStep(6); };
   const goStep7 = (e) => { e?.preventDefault?.(); setStep(7); };
   const goStep8 = (e) => { e?.preventDefault?.(); setStep(8); };
 
@@ -106,15 +120,15 @@ export default function RegistrationForm() {
   function renderStep() {
     switch (step) {
       case 1:
-        // return (
-        //   <EnterRegistration
-        //     regNo={regNo}
-        //     setRegNo={setRegNo}
-        //     error={error}
-        //     setError={setError}
-        //     goStep2={goStep2}
-        //   />
-        // );
+        return (
+          <EnterRegistration
+            regNo={regNo}
+            setRegNo={setRegNo}
+            error={error}
+            setError={setError}
+            goStep2={goStep2}
+          />
+        );
       case 2:
         return (
           <BrandForm
@@ -152,20 +166,16 @@ export default function RegistrationForm() {
         return (
           <OwnershipForm
             backTo4={backTo4}
-            goStep6={goStep6}   // ✅ move to step 6
+            goStep6={goStep6}
           />
         );
       case 6:
-        // In your WarrantyForm, call setStep(7) on Next
         return <WarrantyForm backTo5={goStep5} goStep7={goStep7} />;
       case 7:
-        // In your MediaUploads, call setStep(8) on Next
         return <MediaUploads backTo6={goStep6} goStep8={goStep8} />;
       case 8:
-        // In your AdditionalFeatures, call setStep(9) on Next
-        return <AdditionalFeatures backTo7={goStep7} goStep9={() => setStep(9)}  />;
+        return <AdditionalFeatures backTo7={goStep7} goStep9={() => setStep(9)} />;
       case 9:
-        // ✅ Submit happens here
         return <PricingForm handleSubmitFinal={handleSubmitFinal} backTo8={goStep8} setStep={setStep} />;
       default:
         return null;
@@ -176,18 +186,8 @@ export default function RegistrationForm() {
     <section className="registrationFormMain" style={{ paddingTop: 130, paddingBottom: 130 }}>
       <Container fluid>
         <Row>
-          <Col xs={12} className="mb-4">
-            <Row className="justify-content-center">
-              <Col xs={12} md={8} lg={4}>
-                <div className="carBasicDetails position-relative">
-                  <h6 className="bg-white py-3 text-center fw-semibold fSize-6">
-                    Vehicle Basic Details
-                  </h6>
-                </div>
-              </Col>
-            </Row>
-          </Col>
-
+          {/* ✅ Har step ki heading */}
+          <FormHeadingComponents title={stepHeadings[step - 1]} />
           <Col xs={12}>
             <Row className="justify-content-center">
               <Col xs={12} md={10} lg={7} xl={5}>

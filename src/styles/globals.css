@@ -220,7 +220,7 @@ a {
   left: 0;
   top: 100%;
   width: 100%;
-  background: #fff;
+  background: var(--body-bg-color);
   padding: 10px 0px;
   display: none;
   opacity: 0;
@@ -228,6 +228,15 @@ a {
   z-index: 99;
   border: 1px solid #dde5eb;
   box-shadow: 0 24px 48px hsla(221, 9%, 54%, .08);
+}
+.industriesTop__head p{
+  color: var(--input-color);
+}
+.industries__titles p {
+  color: var(--input-color);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .nav-items:hover .mega-menu {
@@ -1247,6 +1256,7 @@ h6 {
   right: 28px;
   transform: translateY(-50%);
   border-radius: 50%;
+  z-index: 999;
 }
 
 .check {
@@ -1258,6 +1268,7 @@ h6 {
   transform: translateY(-50%);
   border-radius: 50%;
   background-color: var(--common-text-color);
+  z-index: 999;
 }
 
 .me__tx .ma_entr {
@@ -1531,17 +1542,20 @@ h6 {
 /* upload image css on  */
 
 /* Listing cars selected filter css on */
-.cancleClick{
+.cancleClick {
   color: var(--social-text-color);
 }
-.chips span{
+
+.chips span {
   color: var(--social-text-color);
 }
-.clearBtn{
+
+.clearBtn {
   color: #B70F12;
 }
+
 /* Listing cars selected filter css off */
-.buttonSide{
+.buttonSide {
   background-color: var(--call-bg-color);
 }
 
@@ -1680,7 +1694,7 @@ h6 {
 
   31%,
   60% {
-    background-color: #fff;
+    background-color: #FFFFFF;
     /* white */
   }
 

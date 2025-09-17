@@ -15,14 +15,16 @@ import {
 } from "react-bootstrap";
 import { FaBars, FaChevronDown, FaMapMarkerAlt } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faChevronDown, faChevronUp, faXmark } from "@fortawesome/free-solid-svg-icons";
 import CallUsForm from "../common/CallUsForm";
+import BuyCarDropdown from "../common/dropdown/BuyCarDropdown";
 
 export default function Header() {
   const [countryOpen, setCountryOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const countryRef = useRef(null); // <-- no TS generics
   const [showCall, setShowCall] = useState(false);
+  const [isOpen, setIsOpen]=useState(false)
 
   // close country dropdown on outside click / Esc
   useEffect(() => {
@@ -54,7 +56,7 @@ export default function Header() {
             <Col
               xxl={6}
               xs={4}
-              className="d-flex align-items-center gap-3 gap-lg-5"
+              className="d-flex align-items-center gap-3 gap-lg-2"
             >
               {/* mobile menu button */}
               <button
@@ -82,54 +84,21 @@ export default function Header() {
               {/* desktop nav */}
               <nav className="navLinkLists d-none d-xxl-block">
                 <ul className="nav-list p-0 m-0 d-flex align-items-center gap-4">
-                  <li className="nav-items has-mega">
+                  <li className="nav-items has-mega" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
                     <Link
                       href=""
                       className="nav-links fSize-3 fw-medium position-relative d-inline-flex align-items-center"
                     >
-                      Buy used car
-                      <FaChevronDown className="ms-2 text-dark" size={14} />
+                      Buy car
+                      {isOpen ? (
+                        <FontAwesomeIcon icon={faChevronUp} className="ms-2 text-dark" size={14} />
+                      ) : (
+                          <FontAwesomeIcon icon={faChevronDown} className="ms-2 text-dark" size={14}/>
+                      )}
                     </Link>
 
                     {/* mega menu */}
-                    <div
-                      className="mega-menu"
-                      role="menu"
-                      aria-label="Buy used car"
-                    >
-                      <div className="container py-3">
-                        <div className="row gx-4">
-                          <div className="col-12 col-md-6">
-                            <h6 className="mega-heading">By Brand</h6>
-                            <ul className="list-unstyled m-0">
-                              <li className="py-1">
-                                <Link href="#">Toyota</Link>
-                              </li>
-                              <li className="py-1">
-                                <Link href="#">Honda</Link>
-                              </li>
-                              <li className="py-1">
-                                <Link href="#">BMW</Link>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="col-12 col-md-6">
-                            <h6 className="mega-heading">By Price</h6>
-                            <ul className="list-unstyled m-0">
-                              <li className="py-1">
-                                <Link href="#">Under ₹5L</Link>
-                              </li>
-                              <li className="py-1">
-                                <Link href="#">₹5L – ₹10L</Link>
-                              </li>
-                              <li className="py-1">
-                                <Link href="#">₹10L+</Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <BuyCarDropdown />
                   </li>
 
                   <li className="nav-items">
@@ -147,7 +116,16 @@ export default function Header() {
                       href="/new-cars"
                       className="nav-links fSize-3 fw-medium position-relative d-inline-flex align-items-center"
                     >
-                      New cars
+                      Finance
+                      <FaChevronDown className="ms-2 text-dark" size={14} />
+                    </Link>
+                  </li>
+                   <li className="nav-items">
+                    <Link
+                      href="/new-cars"
+                      className="nav-links fSize-3 fw-medium position-relative d-inline-flex align-items-center"
+                    >
+                      Carosa Care
                       <FaChevronDown className="ms-2 text-dark" size={14} />
                     </Link>
                   </li>

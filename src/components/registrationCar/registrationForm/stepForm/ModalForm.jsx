@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import FormHeadingComponents from "../FormHeadingComponents";
 
 function ModalForm({details,
   setDetails,
@@ -36,6 +37,9 @@ function ModalForm({details,
         </div>
 
         <Row className="scollerClass">
+          <Col xs={12}>
+          <p className="fSize-2 fw-medium text-black">POPULAR AUDI MODELS</p>
+          </Col>
           {filteredModels.map((items, i) => {
             const name = items.brandName || items.modelName || items.name || "";
             const isActive = details.model === name;

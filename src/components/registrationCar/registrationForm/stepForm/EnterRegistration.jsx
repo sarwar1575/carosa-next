@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-function EnterRegistration({setRegNo, error, setError, goStep2 }) {
+function EnterRegistration({ setRegNo, error, setError, goStep2 }) {
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -55,19 +55,28 @@ function EnterRegistration({setRegNo, error, setError, goStep2 }) {
         </div>
 
         <div className="d-flex align-items-center justify-content-end gap-4">
-          <button
-            type="button"
-            className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1"
-          >
-            Preview
-          </button>
-          <button
-            type="submit"
-            className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
-          >
-            Next{" "}
-            <FontAwesomeIcon icon={faArrowRight} className="right_nx-ic fSize-2" />
-          </button>
+          <div className="priveBtn">
+            {" "}
+            <button
+              type="button"
+              className="fSize-5 fw-semibold py-2 px-5 outline-none bg-transparent rounded-1"
+            >
+              Preview
+            </button>
+          </div>
+          <div className="bookBtn nextBtn">
+            {" "}
+            <button
+              type="submit"
+              className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
+            >
+              Next{" "}
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="right_nx-ic fSize-2"
+              />
+            </button>
+          </div>
         </div>
       </form>
     </>
