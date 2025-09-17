@@ -21,6 +21,7 @@ import Stories from "@/components/home/Stories";
 import AskAssistance from "@/components/home/AskAssistance";
 import MoreExplore from "./comps/MoreExplore";
 import { useSelectedCar } from "@/store/selectedCar";
+import Image from "next/image";
 
 export default function RecentCarDetails({ car, carIndex }) {
   // if (!car) {
@@ -93,21 +94,14 @@ export default function RecentCarDetails({ car, carIndex }) {
             <Col lg={6}>
               <div className="d-flex">
                 <div className="buttonSide d-flex flex-column justify-content-between">
-                  <Button className="mb-2">
-                    Exterior
-                  </Button>
-                  <Button className="mb-2">
-                    Interior
-                  </Button>
-                  <Button className="mb-2">
-                    Tyres
-                  </Button>
-                  <Button className="mb-2">
-                    Attractions
-                  </Button>
-                  <Button className="mb-2">
-                    Videos
-                  </Button>
+                <div className="styles_thumbnailSlider__LakK3">
+                  <div className="styles_categoryImage__C9pC9">
+                    <div className="styles_categoryImageInner__BnG_c">
+                      <Image src="/images/thumimg.png" height={44} width={44}/>
+                    </div>
+                  </div>
+                  <p id="" class="sc-braxZu gBbksa">Exterior</p>
+                </div>
                 </div>
                 <div className="position-relative">
                   <img
