@@ -1660,6 +1660,41 @@ h6 {
   padding-top: .5rem;
 }
 
+/* ****** Car showcase styles ****** */
+.car-swiper {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.car-swiper .swiper-wrapper {
+  height: 100% !important;
+}
+
+.car-swiper .swiper-slide {
+  height: 100% !important;
+  width: 100% !important;   /* ek slide pure space lega */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.slide-container {
+  width: 100%;
+  height: 500px; /* fixed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container img,
+.slide-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* full visible, cut nahi hoga */
+  border-radius: 6px;
+}
+
 /* spacing tweaks small screens */
 @media (max-width: 1399.98px) {
   .navSearchInput {

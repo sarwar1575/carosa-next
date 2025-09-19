@@ -22,6 +22,7 @@ import AskAssistance from "@/components/home/AskAssistance";
 import MoreExplore from "./comps/MoreExplore";
 import { useSelectedCar } from "@/store/selectedCar";
 import Image from "next/image";
+import CarShowcase from "./CarShowcase";
 
 export default function RecentCarDetails({ car, carIndex }) {
   // if (!car) {
@@ -93,7 +94,7 @@ export default function RecentCarDetails({ car, carIndex }) {
             </Col>
             <Col lg={6}>
               <div className="d-flex">
-                <div className="buttonSide d-flex flex-column justify-content-between">
+                {/* <div className="buttonSide d-flex flex-column justify-content-between">
                 <div className="styles_thumbnailSlider__LakK3">
                   <div className="styles_categoryImage__C9pC9">
                     <div className="styles_categoryImageInner__BnG_c">
@@ -110,7 +111,8 @@ export default function RecentCarDetails({ car, carIndex }) {
                     className="w-100 object-fit-cover"
                     style={{ maxHeight: 487 }}
                   />
-                </div>
+                </div> */}
+                <CarShowcase />
               </div>
               {/* Car overview section  */}
               <div className="bg-white p-3 mt-3">

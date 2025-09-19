@@ -1,0 +1,70 @@
+{
+  "Exterior": {
+    "icon": "/assets/carImage/exterior.avif",
+    "items": [
+      "/assets/carImage/exterior.avif",
+      "/assets/carImage/exterior1.avif",
+      "/assets/carImage/exterior2.avif",
+      "/assets/carImage/exterior3.avif",
+      "/assets/carImage/exterior4.avif",
+      "/assets/carImage/exterior5.avif",
+      "/assets/carImage/exterior6.avif",
+      "/assets/carImage/exterior7.avif"
+    ]
+  },
+  "Interior": {
+    "icon": "/assets/carImage/Interior.avif",
+    "items": [
+      "/assets/carImage/Interior.avif",
+      "/assets/carImage/Interior1.avif",
+      "/assets/carImage/Interior2.avif",
+      "/assets/carImage/Interior3.avif",
+      "/assets/carImage/Interior4.avif",
+      "/assets/carImage/Interior5.avif",
+      "/assets/carImage/Interior6.avif",
+      "/assets/carImage/Interior7.avif",
+      "/assets/carImage/Interior8.avif"
+    ]
+  },
+  "Tyres": {
+    "icon": "/assets/carImage/tyers.png",
+    "items": [
+      "/assets/carImage/tyers.png",
+      "/assets/carImage/tyers1.avif",
+      "/assets/carImage/tyers2.avif",
+      "/assets/carImage/tyers3.avif"
+    ]
+  },
+  "Attractions": {
+    "icon": "/assets/carImage/attractions.png",
+    "items": [
+      "/assets/carImage/attractions.png",
+      "/assets/carImage/attraction.avif",
+      "/assets/carImage/attraction1.avif",
+      "/assets/carImage/attraction2.avif",
+      "/assets/carImage/attraction3.avif",
+      "/assets/carImage/attraction4.avif"
+    ]
+  },
+  "Videos": {
+    "icon": "/assets/carImage/videos.png",
+    "items": [
+      {
+        "type": "image",
+        "src": "/assets/carImage/videos.png"
+      },
+      {
+        "type": "youtube",
+        "src": "https://www.youtube.com/watch?v=iOT0SNKCYKg&list=TLGGSJgapWTIA_4xNzA5MjAyNQ"
+      },
+      {
+        "type": "youtube",
+        "src": "https://www.youtube.com/watch?v=SSVM-5TuOwU&list=TLGG4D83mjhD1eYxNzA5MjAyNQ"
+      },
+      {
+        "type": "youtube",
+        "src": "https://www.youtube.com/watch?v=4OcyT66bBWE&list=TLGG_3M_ODuNZfAxNzA5MjAyNQ&t=17s"
+      }
+    ]
+  }
+}
