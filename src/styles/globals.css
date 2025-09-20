@@ -229,9 +229,11 @@ a {
   border: 1px solid #dde5eb;
   box-shadow: 0 24px 48px hsla(221, 9%, 54%, .08);
 }
-.industriesTop__head p{
+
+.industriesTop__head p {
   color: var(--input-color);
 }
+
 .industries__titles p {
   color: var(--input-color);
   white-space: normal;
@@ -471,6 +473,14 @@ h4 {
   left: 50%;
   transform: translateX(-50%);
 
+}
+
+/* style={{ width: "120px", backgroundColor: "#1E3A8A", borderRadius: "8px" }} */
+.buttonSide {
+
+  width: 90px;
+  background-color: var(--call-bg-color);
+  border-radius: 12px 0px 0px 12px;
 }
 
 /* Recent view car css off  */
@@ -779,9 +789,27 @@ p {
 /* recent cars view details css on  */
 .crnrImg-sx-th {
   position: absolute;
-  top: -24px;
+  top: -30px;
   right: 10px;
-  width: 71px;
+
+}
+
+.whishlist__like {
+  width: 20px !important;
+  height: 18px;
+}
+.setting__whishlist span{
+  position: absolute;
+  left: -20px;
+}
+.setting__whishlist{
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+.crnrImg-sx-th img {
+  width: 100%;
 }
 
 .carDetailsMainParent {
@@ -1672,7 +1700,8 @@ h6 {
 
 .car-swiper .swiper-slide {
   height: 100% !important;
-  width: 100% !important;   /* ek slide pure space lega */
+  width: 100% !important;
+  /* ek slide pure space lega */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1681,7 +1710,8 @@ h6 {
 
 .slide-container {
   width: 100%;
-  height: 500px; /* fixed */
+  height: 500px;
+  /* fixed */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1691,8 +1721,9 @@ h6 {
 .slide-container iframe {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* full visible, cut nahi hoga */
-  border-radius: 6px;
+  object-fit: cover;
+  /* full visible, cut nahi hoga */
+  border-radius: 0px 12px 12px 0px;
 }
 
 /* spacing tweaks small screens */

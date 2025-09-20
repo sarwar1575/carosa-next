@@ -7,6 +7,7 @@ import inspectionData from "../../../../data/CarInspection.json";
 import higlightsCars from "../../../../data/HighlightsCars.json";
 import {
   faChevronRight,
+  faHeart,
   faIndianRupeeSign,
   faLocationDot,
   faPhone,
@@ -840,11 +841,19 @@ export default function RecentCarDetails({ car, carIndex }) {
                     Add to Wishlist
                   </button>
                 </div> */}
-                <img
-                  src="/images/shihiting.png"
-                  alt=""
-                  className="crnrImg-sx-th"
-                />
+                <div className="crnrImg-sx-th">
+                  <div className="position-relative">
+                    <img src="/images/shihiting.png" alt="" className="" />
+                    <Link href="" className="setting__whishlist">
+                      <img
+                        src="/assets/img/whishlist.png"
+                        className="whishlist__like mb-2"
+                      />
+                      <p className="m-0">(1)</p>
+                      <span className="fSize-1">shortlisted</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div className="shareFriend mt-4 d-flex align-items-center justify-content-center gap-5 py-2">
                 <div>

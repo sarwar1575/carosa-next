@@ -24,14 +24,13 @@ export default function CarShowcase() {
   const [activeCategory, setActiveCategory] = useState("Exterior");
 
   return (
-    <div className="d-flex border rounded overflow-hidden" style={{ height: "500px" }}>
+    <div className="d-flex overflow-hidden" style={{ height: "500px" }}>
       {/* Sidebar */}
       <div
         className="buttonSide text-white d-flex flex-column p-2"
-        style={{ width: "120px", backgroundColor: "#1E3A8A", borderRadius: "8px" }}
+        // style={{ width: "120px", backgroundColor: "#1E3A8A", borderRadius: "8px" }}
       >
         {Object.keys(categories).map((category) => (
-
           <button
             key={category}
             className="d-flex flex-column align-items-center justify-content-center p-2 border-0 bg-transparent text-white"
@@ -44,7 +43,9 @@ export default function CarShowcase() {
               const firstIndex = allSlides.findIndex(
                 (s) => s.category === category
               );
-              document.querySelector(".car-swiper")?.swiper.slideToLoop(firstIndex);
+              document
+                .querySelector(".car-swiper")
+                ?.swiper.slideToLoop(firstIndex);
             }}
           >
             <img
@@ -55,7 +56,10 @@ export default function CarShowcase() {
                 height: "50px",
                 objectFit: "cover",
                 borderRadius: "6px",
-                border: activeCategory === category ? "1px solid #fff" : "1px solid transparent",
+                border:
+                  activeCategory === category
+                    ? "2px solid #fff"
+                    : "2px solid transparent",
               }}
             />
             <span
@@ -65,7 +69,6 @@ export default function CarShowcase() {
               {category}
             </span>
           </button>
-
         ))}
       </div>
 
@@ -74,11 +77,9 @@ export default function CarShowcase() {
         <Swiper
           className="w-100 h-100 car-swiper"
           loop={true}
-          navigation
           speed={800}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
           slidesPerView={1}
-          modules={[Navigation, Autoplay]}
+          modules={[]} // keep Navigation removed
           onSlideChange={(swiper) => {
             const current = allSlides[swiper.realIndex];
             setActiveCategory(current.category);
