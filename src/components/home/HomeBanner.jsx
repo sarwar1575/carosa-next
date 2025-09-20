@@ -29,7 +29,7 @@ function HomeBanner() {
               <br />
               Available
             </h1>
-            <div className="buttonsBookingSelling d-flex align-items-center gap-5 pt-4">
+            <div className="buttonsBookingSelling d-flex align-items-center gap-sm-5 gap-3 pt-4">
               <div className="bookBtn">
                 <Link href='' className="fSize-7 fw-bold buyBtn">Buy Now <img src="/images/arrowRight.png" alt="" width={14} className="ms-2"/></Link>
               </div>
@@ -37,7 +37,7 @@ function HomeBanner() {
                 <Link href='/sell' className={`fSize-7 fw-bold buyBtn ${pathname === "/sell" ? "active-class" : ""}`}>Sell <img src="/images/arrowRight.png" alt="" width={14} className="ms-2"/></Link>
               </div>
             </div>
-            <div className="modalTabsListsBtns pt-5">
+            <div className="modalTabsListsBtns pt-sm-5 pt-4">
               <p className="m-0 fSize-6 fw-bold text-white">Or Browse Featured Model</p>
               <div className="modalsBtns mt-3 d-flex align-items-center gap-4">
                 <Link href="" className="carTabs fSize-4 fw-medium text-white text-uppercase"><img src="/images/suvcar.png" alt="" width={26} className="me-1"/> Body</Link>

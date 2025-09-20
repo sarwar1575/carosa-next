@@ -38,7 +38,7 @@ function OwnershipForm({ backTo4, goStep6 }) {
         <div className="owner__list border-bottom pb-3 mb-3">
           <label className="fSize-4 fw-semibold text-black pb-2">Owner</label>
           <Row>
-            <Col lg={6}>
+            <Col lg={6} className="mb-lg-0 mb-2">
               <div className="carType">
                 <div
                   className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
@@ -51,7 +51,7 @@ function OwnershipForm({ backTo4, goStep6 }) {
                 </div>
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="mb-lg-0 mb-2">
               <div className="carType">
                 <div
                   className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${

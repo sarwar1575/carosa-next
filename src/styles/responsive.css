@@ -24,7 +24,8 @@
     .linearBox .home__bannerXp {
         height: 600px !important;
     }
-    .webMainTitle h1{
+
+    .webMainTitle h1 {
         font-size: 34px !important;
     }
 }
@@ -56,6 +57,91 @@
     .mobile-drawer .accordion-body {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         margin: 10px 0px;
+    }
+}
+
+@media (width <=1200px) {
+    .sellBannerContant h1 {
+        font-size: 60px !important;
+    }
+
+    .padding-Y-X {
+        padding: 30px 10px !important;
+    }
+
+    .bannerContents p {
+        white-space: normal;
+        text-overflow: clip;
+        overflow: visible;
+
+    }
+
+}
+
+@media (width <=590px) {
+    .sellBannerContant h1 {
+        font-size: 50px !important;
+    }
+
+    .modalsBtns .carTabs {
+        padding: 7px 10px;
+    }
+
+    .modalsBtns {
+        flex-wrap: wrap !important;
+    }
+}
+
+@media (width <=492px) {
+    .sellBannerContant h1 {
+        font-size: 30px !important;
+    }
+
+    .bookBtn .buyBtn {
+        padding: 10px !important;
+        font-size: 16px !important;
+    }
+
+    .banner__biggerText {
+        font-size: 37px !important;
+    }
+
+    .linearBox .home__bannerXp {
+        height: 540px !important;
+    }
+
+    .brandingImages img {
+        height: 120px !important;
+    }
+
+    .padding-Y-X {
+        padding: 10px 10px !important;
+    }
+
+    .titles h1 {
+        font-size: 30px !important;
+    }
+
+    .titles p {
+
+        font-size: 15px !important;
+        font-weight: 400 !important;
+    }
+
+    .webMainTitle h1 {
+        font-size: 25px !important;
+    }
+
+    .recentlyViewCarHere {
+        margin-bottom: 35px !important;
+    }
+
+    .viewAll img {
+        width: 9px !important;
+    }
+
+    .bannerHere img {
+        height: 670px !important;
     }
 }
 

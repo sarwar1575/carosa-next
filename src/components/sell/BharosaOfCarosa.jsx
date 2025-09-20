@@ -33,7 +33,7 @@ function BharosaOfCarosa() {
           </Row>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 row-cols-xxl-5 g-2 g-lg-3 pb-3">
             {bharosa.map((items, index)=>(
-                <div className="col" key={index}>
+                <div className="col mb-3" key={index}>
                     <div className="cardMain bg-white p-5 d-flex flex-column align-items-center justify-content-center text-center">
                         <img src={items.image} alt="" className="pb-3" height={45}/>
                         <p className="m-0 fSize-3 fw-semibold">{items.title}</p>

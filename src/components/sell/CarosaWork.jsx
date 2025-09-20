@@ -34,7 +34,7 @@ function CarosaWork() {
           <div className="work-panel bg-white p-3 mb-4">
             <Row className="">
               {workData.map((item) => (
-                <Col key={item.id} xs={12} md={6} lg={3}>
+                <Col key={item.id} xs={12} md={6} lg={3} className="mb-3">
                   <div className="work-card">
                     <div className="work-image-wrap">
                       <img

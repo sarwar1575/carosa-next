@@ -18,10 +18,10 @@ function SellBanner() {
         </div>
         <Container
           fluid
-          className="position-absolute top-50 start-50 translate-middle padding-Y-X mt-5"
+          className="position-absolute top-50 start-50 translate-middle padding-Y-X mt-xl-5 mt-2"
         >
           <Row>
-            <Col xs={8}>
+            <Col xl={8}>
               <div className="sellBannerContant">
                 <h1 className="text-white text-center fSize-over fw-semibold">
                   Sell your car at the
@@ -30,7 +30,7 @@ function SellBanner() {
                 </h1>
               </div>
             </Col>
-            <Col xs={4}>
+            <Col xl={4}>
               <div className="map p-4 bg-white rounded-3">
                 <div className="currentLocation d-flex align-items-center justify-content-between mb-2">
                   <p className="fSize-3 fw-medium text-dark m-0">

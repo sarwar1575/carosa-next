@@ -32,7 +32,7 @@ function ChoseCarosa() {
               </div>
             </Col>
             {choseCarosa.map((items, index)=>(
-                <Col xl={4} md={6} xs={12} key={index}>
+                <Col xl={4} md={6} xs={12} key={index} className="mb-4">
                     <div className="carosaChose">
                     <div className="work-image-wrap">
                       <img

@@ -11,7 +11,7 @@ function AdditionalFeatures({ backTo7, goStep9 }) {
       <form className="registraionMainFillForm" onSubmit={goStep9}>
         <div className="owner__list pb-0 mb-4">
           <Row>
-            <Col lg={6}>
+            <Col lg={6} className="mb-lg-0 mb-2">
               <div className="carType">
                 {/* <label className="fSize-4 fw-semibold text-black pb-2">
                   Warranty Type
@@ -23,12 +23,12 @@ function AdditionalFeatures({ backTo7, goStep9 }) {
                   onClick={() => setSunroof("Sunroof")}
                   style={{ cursor: "pointer" }}
                 >
-                  <input type="checkbox" className=""/>
+                  {/* <input type="checkbox" className=""/> */}
                   Sunroof
                 </div>
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="mb-lg-0 mb-2">
               <div className="carType">
                 {/* <label className="fSize-4 fw-semibold text-black pb-2">
                   Warranty Type
@@ -48,7 +48,7 @@ function AdditionalFeatures({ backTo7, goStep9 }) {
         </div>
         <div className="owner__list pb-0 mb-4">
           <Row>
-            <Col lg={6}>
+            <Col lg={6} className="mb-lg-0 mb-2">
               <div className="carType">
                 {/* <label className="fSize-4 fw-semibold text-black pb-2">
                   Warranty Type
@@ -64,7 +64,7 @@ function AdditionalFeatures({ backTo7, goStep9 }) {
                 </div>
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="mb-lg-0 mb-2">
               <div className="carType">
                 {/* <label className="fSize-4 fw-semibold text-black pb-2">
                   Warranty Type
