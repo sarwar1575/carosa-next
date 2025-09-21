@@ -144,7 +144,29 @@
         height: 670px !important;
     }
 }
-
+@media (width <=492px){
+    .plate-wrap{
+            padding: 5px 14px 5px 0px !important;
+    }
+    .priveBtn button{
+        width: 100% !important;
+    }
+    .priveBtn {
+        width: 100% !important;
+    }
+    .bookBtn.nextBtn{
+        width: 100% !important;
+    }
+    .bookBtn.nextBtn button{
+        width: 100% !important;
+    }
+    .carBody {
+    height: 250px !important;
+}
+.sightingVideo img{
+    height: 200px !important;
+}
+}
 /* min-width */
 @media (width >=768px) {}
 

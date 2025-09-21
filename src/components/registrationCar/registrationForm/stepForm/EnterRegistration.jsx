@@ -54,7 +54,7 @@ function EnterRegistration({ setRegNo, error, setError, goStep2 }) {
           <span>(auto-fill if RTO integration available)</span>
         </div>
 
-        <div className="d-flex align-items-center justify-content-end gap-4">
+        <div className="d-flex flex-wrap align-items-center justify-content-sm-end gap-4">
           <div className="priveBtn">
             {" "}
             <button
