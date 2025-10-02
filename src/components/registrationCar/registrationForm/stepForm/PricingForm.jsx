@@ -1,20 +1,32 @@
+"use client";
+
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
 
 function PricingForm({ backTo8 }) {
   const [manual, setManual] = useState(null);
-  const [manualsce, setManualsec]=useState(null)
+  const [manualsce, setManualsec] = useState(null);
+
+   const router = useRouter();   // ✅ App Router hook
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/publish");    // ✅ will navigate to app/publish/page.js
+  };
+
   return (
     <form className="registraionMainFillForm">
       <div className="owner__list pb-0 mb-4">
         <Row>
           <Col lg={12} className="pb-4">
             <div className="carType">
-               <p className="mt-2 fSize-4 text-dark gap-2">
-          <strong className="fw-semibold text-dark">Listing Price</strong> <span className="fst-italic"> (Price you want to display publicly)</span>
-        </p>
+              <p className="mt-2 fSize-4 text-dark gap-2">
+                <strong className="fw-semibold text-dark">Listing Price</strong>{" "}
+                <span className="fst-italic"> (Price you want to display publicly)</span>
+              </p>
               <div
                 className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                   manual === "Touchscreen" ? "activeSelect" : ""
@@ -28,9 +40,10 @@ function PricingForm({ backTo8 }) {
           </Col>
           <Col lg={12}>
             <div className="carType">
-                <p className="mt-2 fSize-4 text-dark gap-2">
-          <strong className="fw-semibold text-dark">Listing Price</strong> <span className="fst-italic fw-light"> (Price you want to display publicly)</span>
-        </p>
+              <p className="mt-2 fSize-4 text-dark gap-2">
+                <strong className="fw-semibold text-dark">Listing Price</strong>{" "}
+                <span className="fst-italic fw-light"> (Price you want to display publicly)</span>
+              </p>
               <div
                 className={`button__selects text-center w-100 fSize-2 fw-semibold py-3 ${
                   manualsce === "CruiseControl" ? "activeSelect" : ""
@@ -38,7 +51,7 @@ function PricingForm({ backTo8 }) {
                 onClick={() => setManualsec("CruiseControl")}
                 style={{ cursor: "pointer" }}
               >
-               Enter Manual
+                Enter Manual
               </div>
             </div>
           </Col>
@@ -57,8 +70,9 @@ function PricingForm({ backTo8 }) {
 
         <div className="bookBtn nextBtn">
           <button
-            type="submit"
+            type="button"    // ✅ not "submit"
             className="bookHere text-white fSize-5 fw-semibold py-2 px-5 rounded-1"
+            onClick={handleClick}
           >
             Finish{" "}
             <FontAwesomeIcon
