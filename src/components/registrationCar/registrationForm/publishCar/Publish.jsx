@@ -53,7 +53,7 @@ function Publish() {
                 {/* Sidebar */}
                 <div
                   className="buttonSide text-white d-flex flex-column p-2"
-                  style={{ width: "120px", backgroundColor: "#1E3A8A", borderRadius: "8px" }}
+                  style={{backgroundColor: "#1E3A8A", borderRadius: "8px 0px 0px 8px" }}
                 >
                   {Object.keys(categories).map((category) => (
                     <button

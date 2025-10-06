@@ -31,12 +31,9 @@ function YourFavoriteBrand() {
             </Col>
           </Row>
           <div
-            className="row g-3 g-lg-2 pb-3"
+            className="row g-3 g-lg-2 pb-3 responsive-brand-columns"
             style={{
               "--bs-columns": 6,
-              "@media (min-width: 768px)": { "--bs-columns": 4 },
-              "@media (min-width: 992px)": { "--bs-columns": 5 },
-              "@media (min-width: 1200px)": { "--bs-columns": 7 },
             }}
           >
             {brandCars.map((items, index) => (

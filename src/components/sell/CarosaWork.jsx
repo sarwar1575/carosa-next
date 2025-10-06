@@ -40,9 +40,7 @@ function CarosaWork() {
                       <img
                         src={item.image}
                         alt={item.title}
-                        fill
                         className="w-100 rounded-top"
-                       
                         height="400"
                       />
                     </div>

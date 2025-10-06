@@ -24,10 +24,19 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const countryRef = useRef(null); // <-- no TS generics
   const [showCall, setShowCall] = useState(false);
-  const [isOpen, setIsOpen]=useState(false)
+  const [isOTPMode, setIsOTPMode] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Ensure component is mounted on client side
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // close country dropdown on outside click / Esc
   useEffect(() => {
+    if (!isMounted) return;
+    
     const onDoc = (e) => {
       if (countryRef.current && !countryRef.current.contains(e.target)) {
         setCountryOpen(false);
@@ -42,7 +51,7 @@ export default function Header() {
       document.removeEventListener("mousedown", onDoc);
       document.removeEventListener("keydown", onEsc);
     };
-  }, []);
+  }, [isMounted]);
 
 
   
@@ -170,7 +179,7 @@ export default function Header() {
                     India
                     <FaChevronDown className="ms-2 text-dark" size={15} />
                   </button>
-                  {countryOpen && (
+                  {isMounted && countryOpen && (
                     <div className="dropdown-menu show">
                       <ul className="countryLists p-0 m-0">
                         <li>
@@ -207,21 +216,34 @@ export default function Header() {
                   Call us
                 </button>
                
-                  <div className={`popup-box ${showCall ? "show" : ""}`}>
+                  {isMounted && (
+                    <div className={`popup-box ${showCall ? "show" : ""}`}>
                     <div className="position-relative pb-4">
-                    <FontAwesomeIcon icon={faXmark} className="close-icon" onClick={() => setShowCall(false)}/>
-                    <p className="fSize-3 fw-normal text-dark fst-italic">Connect With Us:</p>
-                    <p className="fSize-3 fw-semibold text-dark m-0">Want the best car advice?</p>
-                     <p className="fSize-3 fw-semibold text-dark m-0">Connect with us at <span>+91-9090909090</span></p>
+                    <FontAwesomeIcon icon={faXmark} className="close-icon" onClick={() => {
+                      setShowCall(false);
+                      setIsOTPMode(false);
+                    }}/>
+                    {!isOTPMode && (
+                      <>
+                        <p className="fSize-3 fw-normal text-dark fst-italic">Connect With Us:</p>
+                        <p className="fSize-3 fw-semibold text-dark m-0">Want the best car advice?</p>
+                         <p className="fSize-3 fw-semibold text-dark m-0">Connect with us at <span>+91-9090909090</span></p>
+                      </>
+                    )}
                     </div>
-                    <div className="OrLine border-bottom position-relative mb-4">
-                      <div className="Or rounded-circle text-white d-flex justify-content-center align-items-center fSize-3 fw-medium">Or</div>
+                    {!isOTPMode && (
+                      <>
+                        <div className="OrLine border-bottom position-relative mb-4">
+                          <div className="Or rounded-circle text-white d-flex justify-content-center align-items-center fSize-3 fw-medium">Or</div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                          <p className="fSize-4 fw-semibold text-dark">Request a Call Back</p>
+                        </div>
+                      </>
+                    )}
+                    <CallUsForm onOTPStateChange={setIsOTPMode} />
                     </div>
-                    <div className="d-flex justify-content-center">
-                      <p className="fSize-4 fw-semibold text-dark">Request a Call Back</p>
-                    </div>
-                    <CallUsForm />
-                  </div>
+                  )}
               
                 {/* user pill (sm+) */}
                 <div className="userNameHere d-none d-sm-flex align-items-center gap-2">
@@ -297,7 +319,7 @@ export default function Header() {
                 </span>
                 <FaChevronDown size={14} />
               </Button>
-              {countryOpen && (
+              {isMounted && countryOpen && (
                 <div className="border rounded mt-2">
                   <button className="dropdown-item py-2">India</button>
                   <button className="dropdown-item py-2">USA</button>

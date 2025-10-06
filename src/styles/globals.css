@@ -1769,3 +1769,26 @@ h6 {
     background-color: var(--call-bg-color);
   }
 }
+
+/* Responsive brand columns */
+.responsive-brand-columns {
+  --bs-columns: 6;
+}
+
+@media (min-width: 768px) {
+  .responsive-brand-columns {
+    --bs-columns: 4;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-brand-columns {
+    --bs-columns: 5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive-brand-columns {
+    --bs-columns: 7;
+  }
+}
